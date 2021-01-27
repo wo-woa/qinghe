@@ -28,11 +28,13 @@ $shuff=M('config')->where(['cname' => 'site_slider'])->order('extra asc')->selec
 <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 
 <div style="background:white;display:flex;align-items:center;">
-	<form action="/Mem/index"  id='alipaysubmit' name='alipaysubmit' method='get' style="display:flex;align-items:center;line-height:40px;height:40px;margin:5px 15px;background:#f6f6f6;border-radius:33px;width:100%;-webkit-user-select:text!important;">
+	<a style="display:flex;align-items:center;width: 60px;height:40px;margin-left:15px;font-weight:bold;font-size: 20px">清和</a>
+	<form action="/Mem/index"  id='alipaysubmit' name='alipaysubmit' method='get' class="input-form">
+		<img src="/Public/index/search.png" style="width:18px;height:auto;margin-right:20px;margin-left: 10px" onclick="document.forms['alipaysubmit'].submit();">
+		<input value="" name="searchtxt" placeholder="请输入商品" style="flex:1 1 60%;background:transparent;padding-left:0px;font-size:13px;-webkit-user-select:text!important;user-select:text!important;border:none;" />
 
-		<input value="" name="searchtxt" placeholder="请输入商品" style="flex:1 1 60%;background:transparent;padding-left:15px;font-size:13px;-webkit-user-select:text!important;user-select:text!important;border:none;" />
-	  <img src="/Public/index/so.png" style="width:20px;height:auto;margin-right:20px;" onclick="document.forms['alipaysubmit'].submit();">
 	</form>
+	<img src="/Public/index/bell.png" style="width:20px;height:auto;margin-right:20px;margin-left: 10px" onclick="document.forms['alipaysubmit'].submit();">
 
 </div>
  
@@ -46,6 +48,17 @@ $shuff=M('config')->where(['cname' => 'site_slider'])->order('extra asc')->selec
       height: 100%;
 
     }
+	.input-form{
+		display:flex;
+		align-items:center;
+		line-height:40px;
+		height:40px;
+		margin:5px 5px 5px 15px;
+		background:#f6f6f6;
+		border-radius:33px;
+		width:100%;
+		-webkit-user-select:text!important;
+	}
   </style>
 	
 <div class="swiper-container" styleaaa="background:#f5faff ;background-size:100%;">
