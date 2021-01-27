@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>商城分享二维码</title>
+	<link rel="stylesheet" href="/layui-v2.5.7/layui/css/layui.css">
+	<script  src="/layui-v2.5.7/layer.mobile-v2.0/layer_mobile/layer.js"></script>  
+</head>
+
+<body style="background:#f8f8f8;font-family:微软雅黑;">
+
+<div style="height:44px;width:100%;background:white;border-bottom:1px solid #eee;display:flex;line-height:44px;align-items:center;text-align:center;font-weight:500;overflow:hidden;font-size:16px;color:#333;">
+	<a href="/Mem/my" style="width:40px;"><i class="layui-icon layui-icon-left"  ></i></a>
+	<div style="flex:1 1 60%;">商城分享二维码</div>
+	<div style="width:50px;"></div>	
+</div>
+
+ 
+<div style="margin-top:15px;text-align:center;">
+
+<?php 
+		$id = $aginfo['id'];//kget('id',0);
+
+// if($id>0){
+// 	 $hone=M('agent')->where(['id'=>$id])->find();
+// 	 if($hone['alevel']==20){
+// 	 	die('当前不是一级代理，没有二维码。');
+// 	 }
+
+// }
+
+		$ewm=kewm('http://shop.xn--55qx4v16yjqa.com/Mem/index/agid/'.$id,'shareewm'.$id);
+// $ewm='/addkf.jpg';
+	?>
+		
+ 
+	
+	<img src="{$ewm}" alt="" style="width:200px;height:200px;padding:10px;">
+	<p>请关注公众号后扫码打开</p> 
+</div>
+
+
+	 
+
+
+		
+ 
+
+
+
+
+
+</body>
+
+</html>

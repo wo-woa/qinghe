@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>我的代理</title>
+	<link rel="stylesheet" href="/layui-v2.5.7/layui/css/layui.css">
+	<script  src="/layui-v2.5.7/layer.mobile-v2.0/layer_mobile/layer.js"></script>  
+</head>
+
+<body style="background:#f8f8f8;font-family:微软雅黑;">
+
+<div style="height:44px;width:100%;background:white;border-bottom:1px solid #eee;display:flex;line-height:44px;align-items:center;text-align:center;font-weight:500;overflow:hidden;font-size:16px;color:#333;">
+	<a href="/Mem/my" style="width:40px;"><i class="layui-icon layui-icon-left"  ></i></a>
+	<div style="flex:1 1 60%;">我的代理</div>
+	<div style="width:50px;"></div>	
+</div>
+
+ 
+
+
+<div style="margin-top:5px;">	
+	<volist name="allarr" id="one">
+		<div  style="display:flex;justify-content:flex-start;widthaa:100%;background:white;margin:10px;align-items:middle;font-weight:normal;padding:10px 0;">
+				<!-- {$svo.img}/Public/jinriyixing/b.png-->
+				<img src="{$one.img}" alt="" style="width:90px;height:auto;max-height:100px;">
+				<div style="flex:1 1 80%;padding-left:10px;padding-top:2px;margin-right: 5px;">
+					
+					<div style="">
+						<div><span class="thetitle  aui-ellipsis-1" style="color:#1a1a1a;font-size:14px;font-weightaa:500; display:inline-block;">{$one.nickname}</span></div>
+					 	<div><span class="therank  aui-ellipsis-1" style="color:#aaa;font-size:13px;padding-top:4px;display:inline-block;">{$one.intro}</span></div>
+
+						<div class="theaddr  aui-ellipsis-1" style="color:#aaa;font-size:13px;width:200px;padding-top:2px;display:inline-block;">时间：{$one['addtime']|date='Y-m-d H:i',###}</div>
+
+						<div class="theaddr  aui-ellipsis-1" style="color:#aaa;font-size:13px;width:200px;padding-top:2px;display:inline-block;">用户数：{$one['usernum']}</div>							
+					</div>
+					
+				</div>			
+			</div>
+	</volist>
+</div>
+
+
+	 
+
+
+		
+ 
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1531 @@
+[ 2021-01-27T13:10:35+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+
+[ 2021-01-27T13:11:07+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000233s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0339s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0369s ]
+
+[ 2021-01-27T13:11:07+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002460s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002478s ]
+
+[ 2021-01-27T13:12:16+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000222s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0359s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0361s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 102 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 102 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0381s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0428s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0465s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0357s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0336s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0334s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0382s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0394s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0372s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0417s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0326s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0351s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0355s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:12:50+08:00 ] 127.0.0.1 /Mem/carts
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000205s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0375s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0341s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 102 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 102 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0344s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0329s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0341s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0382s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0354s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0394s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0347s ]
+SQL: SHOW COLUMNS FROM `app_addr` [ RunTime:0.0352s ]
+SQL: SELECT * FROM `app_addr` WHERE `memid` = 1 LIMIT 1   [ RunTime:0.0329s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000020s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000035s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0323s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0406s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.088655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088666s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000258s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000268s ]
+
+[ 2021-01-27T13:12:53+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000203s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0385s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 102 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 102 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0361s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0348s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0362s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0377s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0344s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0382s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0375s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0415s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0356s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000045s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0338s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0392s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0339s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0438s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:13:30+08:00 ] 127.0.0.1 /Mem/index?tp=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000228s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0343s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0415s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 102 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 102 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 102 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0490s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0394s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0425s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0692s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.3222s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0464s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0522s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0446s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0522s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0469s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000024s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000036s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0633s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0528s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0885s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0440s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:14:15+08:00 ] 127.0.0.1 /Mem/index?tp=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0366s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0394s ]
+
+[ 2021-01-27T13:14:15+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000238s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000251s ]
+
+[ 2021-01-27T13:14:26+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000205s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0476s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0424s ]
+
+[ 2021-01-27T13:14:26+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000221s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000238s ]
+
+[ 2021-01-27T13:14:30+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0347s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0334s ]
+
+[ 2021-01-27T13:14:30+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000211s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000225s ]
+
+[ 2021-01-27T13:14:46+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+
+[ 2021-01-27T13:14:46+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000199s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0486s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0382s ]
+
+[ 2021-01-27T13:14:46+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000211s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000224s ]
+
+[ 2021-01-27T13:15:28+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000189s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000244s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0432s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2021-01-27T13:15:28+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000237s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000249s ]
+
+[ 2021-01-27T13:15:33+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000205s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000218s ]
+
+[ 2021-01-27T13:15:33+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000202s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0322s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0309s ]
+
+[ 2021-01-27T13:15:33+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000186s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000208s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000222s ]
+
+[ 2021-01-27T13:15:38+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000256s ]
+
+[ 2021-01-27T13:15:38+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0472s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0448s ]
+
+[ 2021-01-27T13:15:38+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000210s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000222s ]
+
+[ 2021-01-27T13:15:53+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0404s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0343s ]
+
+[ 2021-01-27T13:15:53+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000218s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000235s ]
+
+[ 2021-01-27T13:16:17+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000243s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0329s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0344s ]
+
+[ 2021-01-27T13:16:17+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000224s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000242s ]
+
+[ 2021-01-27T13:16:44+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000213s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000224s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0421s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0471s ]
+
+[ 2021-01-27T13:16:44+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000345s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000365s ]
+
+[ 2021-01-27T13:16:48+08:00 ] 127.0.0.1 /Mem/carts
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000230s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0332s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0342s ]
+
+[ 2021-01-27T13:16:48+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000218s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000236s ]
+
+[ 2021-01-27T13:17:34+08:00 ] 127.0.0.1 /Mem/carts
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0418s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0460s ]
+
+[ 2021-01-27T13:17:34+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000002s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000186s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000238s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000253s ]
+
+[ 2021-01-27T13:19:31+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000206s ]
+
+[ 2021-01-27T13:19:31+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000204s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0335s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0394s ]
+
+[ 2021-01-27T13:19:31+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000215s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000230s ]
+
+[ 2021-01-27T13:19:38+08:00 ] 127.0.0.1 /Mem/carts
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000220s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0414s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0372s ]
+
+[ 2021-01-27T13:19:38+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000254s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000273s ]
+
+[ 2021-01-27T13:20:16+08:00 ] 127.0.0.1 /Mem/carts
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0381s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0429s ]
+
+[ 2021-01-27T13:20:16+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000250s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000263s ]
+
+[ 2021-01-27T13:22:59+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+
+[ 2021-01-27T13:22:59+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000265s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0455s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0468s ]
+
+[ 2021-01-27T13:22:59+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000246s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000259s ]
+
+[ 2021-01-27T13:24:01+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000205s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000216s ]
+
+[ 2021-01-27T13:24:01+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000208s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0399s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0362s ]
+
+[ 2021-01-27T13:24:01+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000215s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000229s ]
+
+[ 2021-01-27T13:24:12+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000210s ]
+
+[ 2021-01-27T13:24:12+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000221s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0337s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0371s ]
+
+[ 2021-01-27T13:24:12+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000207s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000221s ]
+
+[ 2021-01-27T13:24:58+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000213s ]
+
+[ 2021-01-27T13:24:59+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000210s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0427s ]
+SQL: SELECT * FROM `app_member` WHERE `openid` = 'a0b' LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2021-01-27T13:24:59+08:00 ] 127.0.0.1 /Login/getoid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000216s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000231s ]
+
+[ 2021-01-27T13:25:43+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000235s ]
+
+[ 2021-01-27T13:25:44+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000213s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0399s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0402s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0367s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0445s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0401s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0358s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0377s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0369s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0358s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0364s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0394s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000046s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0345s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0401s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0348s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0346s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:32:18+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000250s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0412s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0382s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0355s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0385s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0379s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0387s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0401s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0433s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0396s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0367s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0436s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0377s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000046s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0342s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0365s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0362s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0340s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:35:15+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000222s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000235s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0429s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0411s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0518s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0371s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0369s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0423s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0411s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0364s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0422s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0421s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000044s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0599s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0424s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0414s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:38:46+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000182s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000236s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0328s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0348s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0342s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0357s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0345s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0324s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0356s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0315s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0318s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0314s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0505s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000045s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0399s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0365s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0342s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0301s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:39:12+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000230s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0432s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0414s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0398s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0362s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0384s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0378s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0516s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0394s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0373s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0493s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0382s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000044s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0396s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0425s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0421s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0418s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:39:42+08:00 ] 127.0.0.1 /Mem/carts
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0389s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0402s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0331s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.2880s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0344s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0371s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0468s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0353s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0349s ]
+SQL: SHOW COLUMNS FROM `app_addr` [ RunTime:0.0324s ]
+SQL: SELECT * FROM `app_addr` WHERE `memid` = 1 LIMIT 1   [ RunTime:0.0319s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000034s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0449s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0328s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000272s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000281s ]
+
+[ 2021-01-27T13:40:18+08:00 ] 127.0.0.1 /Mem/orders
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000206s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000217s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0466s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0423s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.1260s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0467s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0377s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0574s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0476s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0401s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0409s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `okstates` IN ('3','1','2') ORDER BY id desc LIMIT 50   [ RunTime:0.0472s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0550s ]
+SQL: SELECT * FROM `app_member` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.0515s ]
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `app_agent` WHERE ( 1=1 AND id='2' ) LIMIT 1   [ RunTime:0.0444s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0688s ]
+SQL: SELECT * FROM `app_cart` WHERE ( 1=1 AND payid='8' )  [ RunTime:0.1058s ]
+SQL: SELECT * FROM `app_member` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.0480s ]
+SQL: SELECT * FROM `app_agent` WHERE ( 1=1 AND id='2' ) LIMIT 1   [ RunTime:0.0439s ]
+SQL: SELECT * FROM `app_cart` WHERE ( 1=1 AND payid='7' )  [ RunTime:0.0423s ]
+SQL: SELECT * FROM `app_member` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.0416s ]
+SQL: SELECT * FROM `app_agent` WHERE ( 1=1 AND id='2' ) LIMIT 1   [ RunTime:0.0383s ]
+SQL: SELECT * FROM `app_cart` WHERE ( 1=1 AND payid='6' )  [ RunTime:0.0367s ]
+SQL: SHOW COLUMNS FROM `app_addr` [ RunTime:0.0356s ]
+SQL: SELECT * FROM `app_addr` WHERE `memid` = 1 LIMIT 1   [ RunTime:0.0480s ]
+SQL: SELECT * FROM `app_addr` WHERE `memid` = 1 LIMIT 1   [ RunTime:0.0655s ]
+SQL: SELECT * FROM `app_addr` WHERE `memid` = 1 LIMIT 1   [ RunTime:0.0365s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000021s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000034s ]
+NOTIC: [8] Undefined variable: maddr D:\software\phpstudy_pro\WWW\Runtime\Cache\Home\e3fc1f015ce13397d9506dc7bc96fe09.php 第 73 行.
+NOTIC: [8] Undefined variable: maddr D:\software\phpstudy_pro\WWW\Runtime\Cache\Home\e3fc1f015ce13397d9506dc7bc96fe09.php 第 73 行.
+NOTIC: [8] Undefined index: addtime D:\software\phpstudy_pro\WWW\Runtime\Cache\Home\e3fc1f015ce13397d9506dc7bc96fe09.php 第 74 行.
+NOTIC: [8] Undefined variable: maddr D:\software\phpstudy_pro\WWW\Runtime\Cache\Home\e3fc1f015ce13397d9506dc7bc96fe09.php 第 73 行.
+NOTIC: [8] Undefined variable: maddr D:\software\phpstudy_pro\WWW\Runtime\Cache\Home\e3fc1f015ce13397d9506dc7bc96fe09.php 第 73 行.
+NOTIC: [8] Undefined index: addtime D:\software\phpstudy_pro\WWW\Runtime\Cache\Home\e3fc1f015ce13397d9506dc7bc96fe09.php 第 74 行.
+NOTIC: [8] Undefined variable: maddr D:\software\phpstudy_pro\WWW\Runtime\Cache\Home\e3fc1f015ce13397d9506dc7bc96fe09.php 第 73 行.
+NOTIC: [8] Undefined variable: maddr D:\software\phpstudy_pro\WWW\Runtime\Cache\Home\e3fc1f015ce13397d9506dc7bc96fe09.php 第 73 行.
+NOTIC: [8] Undefined index: addtime D:\software\phpstudy_pro\WWW\Runtime\Cache\Home\e3fc1f015ce13397d9506dc7bc96fe09.php 第 74 行.
+NOTIC: [8] Undefined variable: allarraaa D:\software\phpstudy_pro\WWW\Runtime\Cache\Home\e3fc1f015ce13397d9506dc7bc96fe09.php 第 88 行.
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0363s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0414s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.107123s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.107134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000194s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000249s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000260s ]
+
+[ 2021-01-27T13:40:19+08:00 ] 127.0.0.1 /Mem/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000209s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0371s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0479s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0486s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0351s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0351s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0485s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0348s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0405s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0375s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0357s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0368s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000024s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000034s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0397s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0394s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0387s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0448s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:41:19+08:00 ] 127.0.0.1 /Mem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000223s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0412s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0383s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0441s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0308s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0343s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0366s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0319s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0377s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0313s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0371s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000035s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0391s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0317s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0325s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0314s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:42:34+08:00 ] 127.0.0.1 /Mem
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000204s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0441s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0374s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0344s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0345s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0361s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0347s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0362s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0384s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0347s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0375s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0403s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0599s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000039s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0389s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0371s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0381s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0362s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:45:03+08:00 ] 127.0.0.1 /Mem/index?tp=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000256s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0405s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0414s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0364s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0355s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0372s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0356s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0359s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0379s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0386s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0448s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0392s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY amt asc  [ RunTime:0.0373s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000035s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0409s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0378s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0474s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0372s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:45:04+08:00 ] 127.0.0.1 /Mem/index?tp=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000255s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0353s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0366s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0331s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0337s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0335s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0364s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0429s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0335s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY amt asc  [ RunTime:0.0355s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000041s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0399s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0374s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0341s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0321s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:45:05+08:00 ] 127.0.0.1 /Mem/index?tp=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000212s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0419s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0384s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0367s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0622s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0376s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0406s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0381s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0457s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0389s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0361s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0366s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY amt asc  [ RunTime:0.0432s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000038s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0528s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0388s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0519s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0374s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:45:05+08:00 ] 127.0.0.1 /Mem/index?tp=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000146s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000203s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0367s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0393s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0334s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0355s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0365s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0336s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0349s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0356s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0331s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0336s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0368s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000037s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0337s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0471s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0492s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0353s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:45:08+08:00 ] 127.0.0.1 /Mem/index?tp=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000005s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000193s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0321s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0356s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0367s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0437s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0359s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0373s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0565s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0319s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0328s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0342s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0312s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY addtime asc  [ RunTime:0.0323s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000038s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0649s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0382s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0324s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:45:10+08:00 ] 127.0.0.1 /Mem/index?tp=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000222s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0388s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0351s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0314s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0331s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0416s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0317s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0328s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0374s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0311s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY stock desc  [ RunTime:0.0308s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000037s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0346s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0309s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0425s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0432s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:45:12+08:00 ] 127.0.0.1 /Mem/index?tp=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000006s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000465s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0369s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0423s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0372s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0550s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0381s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0418s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0374s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0386s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY amt asc  [ RunTime:0.0381s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000024s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000035s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0379s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0349s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0384s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0349s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:45:14+08:00 ] 127.0.0.1 /Mem/index?tp=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000149s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000275s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0372s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0467s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0362s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0362s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0391s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0366s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0425s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0392s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0401s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0375s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0425s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY stock desc  [ RunTime:0.0368s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000036s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0358s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0375s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0420s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:45:43+08:00 ] 127.0.0.1 /Mem/index?tp=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000150s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000212s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0332s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0357s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0333s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0333s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0336s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0388s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0317s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0387s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0359s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0319s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0377s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY stock desc  [ RunTime:0.0418s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000038s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0378s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0359s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0378s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0353s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:46:33+08:00 ] 127.0.0.1 /Mem/index?tp=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000157s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000212s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0343s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0363s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0358s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0339s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0484s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0432s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0341s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0354s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0361s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0343s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0356s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY stock desc  [ RunTime:0.0367s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000036s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0365s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0384s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0332s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0347s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:46:45+08:00 ] 127.0.0.1 /Mem/index?tp=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0344s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0395s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0341s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0323s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0326s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0328s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0343s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0348s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0368s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY stock desc  [ RunTime:0.0353s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000037s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0334s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0313s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0331s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:48:40+08:00 ] 127.0.0.1 /Mem/index?tp=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000246s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0373s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0445s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0466s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0613s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0335s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0341s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0428s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0321s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0376s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY stock desc  [ RunTime:0.0358s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000052s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0343s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0349s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0406s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0362s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:49:10+08:00 ] 127.0.0.1 /Mem/index?searchtxt=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000223s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0396s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0384s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0343s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0425s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0391s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0394s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0386s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0701s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0472s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0347s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0359s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000037s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0347s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0378s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0367s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:50:27+08:00 ] 127.0.0.1 /Mem/index?searchtxt=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0678s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0415s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0318s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0318s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0382s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0322s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0327s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0335s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0308s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0299s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000035s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0312s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0298s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0343s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:51:01+08:00 ] 127.0.0.1 /Mem/index?searchtxt=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000004s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000207s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0356s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0336s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0332s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0375s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0423s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0317s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0375s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0307s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0353s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000040s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0312s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0315s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0339s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0458s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+
+[ 2021-01-27T13:52:29+08:00 ] 127.0.0.1 /Mem/index?searchtxt=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000003s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000215s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000227s ]
+SQL: SHOW COLUMNS FROM `app_member` [ RunTime:0.0369s ]
+SQL: SELECT * FROM `app_member` WHERE `states` = 1 LIMIT 1   [ RunTime:0.0337s ]
+NOTIC: [8] Undefined index: appid D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined index: appsec D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+NOTIC: [8] Undefined variable: randstr D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `app_config` [ RunTime:0.0316s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_name' LIMIT 1   [ RunTime:0.0346s ]
+NOTIC: [8] Undefined variable: pagetitle D:\software\phpstudy_pro\WWW\Application\Home\Controller\MemController.class.php 第 56 行.
+SQL: SHOW COLUMNS FROM `app_agent` [ RunTime:0.0343s ]
+SQL: SELECT * FROM `app_agent` WHERE `openid` = 'oDXX16VpDLM1uIqvMEcqsRdZrOUo' LIMIT 1   [ RunTime:0.0383s ]
+SQL: SHOW COLUMNS FROM `app_fundlog` [ RunTime:0.0397s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0520s ]
+SQL: SELECT * FROM `app_payment` WHERE `okstates` = 1 AND `pstates` = 0 LIMIT 10   [ RunTime:0.0395s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'app_mon' LIMIT 1   [ RunTime:0.0344s ]
+SQL: SHOW COLUMNS FROM `app_product` [ RunTime:0.0374s ]
+SQL: SELECT * FROM `app_product` WHERE `states` = 1 AND `stock` > 0 ORDER BY ordering asc  [ RunTime:0.0323s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000038s ]
+SQL: SELECT * FROM `app_config` WHERE `cname` = 'site_slider' ORDER BY extra asc  [ RunTime:0.0349s ]
+SQL: SHOW COLUMNS FROM `app_cart` [ RunTime:0.0334s ]
+SQL: SELECT * FROM `app_payment` WHERE `memid` = 1 AND `orderno` = '1_0' AND `okstates` = 0 LIMIT 1   [ RunTime:0.0351s ]
+SQL: SHOW COLUMNS FROM `app_payment` [ RunTime:0.0404s ]
+ERR: cURL error 60: SSL certificate problem: unable to get local issuer certificate (see http://curl.haxx.se/libcurl/c/libcurl-errors.html)
+

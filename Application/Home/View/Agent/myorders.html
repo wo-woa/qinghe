@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>结算记录</title>
+	<link rel="stylesheet" href="/layui-v2.5.7/layui/css/layui.css">
+	<script  src="/layui-v2.5.7/layer.mobile-v2.0/layer_mobile/layer.js"></script>  
+</head>
+
+<body style="background:#f8f8f8;font-family:微软雅黑;">
+
+<div style="height:44px;width:100%;background:white;border-bottom:1px solid #eee;display:flex;line-height:44px;align-items:center;text-align:center;font-weight:500;overflow:hidden;font-size:16px;color:#333;">
+	<a href="/Mem/my" style="width:40px;"><i class="layui-icon layui-icon-left"  ></i></a>
+	<div style="flex:1 1 60%;">结算记录</div>
+	<div style="width:50px;"></div>	
+</div>
+
+ 
+
+
+
+
+	<volist name="allarr" id="one">
+<br>
+<a href="#" style="padding:3px 15px;display:flex;align-items:center;justify-contentaa:space-between;background:white;">
+			<i class="layui-icon layui-icon-rmb"  style="width:30px;flex-shrink:0;font-size:1.5em;" ></i>
+			<div style="flex:1 1 60%;margin:8px 5px;">
+				<div style="font-size:1.15em;margin:1px 0px 8px 0px;color:bold;">金额：{$one.amt}</div>
+				<!-- <div style="color:#666;"><span style="font-size:1.05em;margin-right:10px;color:#333;">{$maddr.realname}aa </span> {$maddr.tel}bb</div> -->
+				<div style="color:#777;padding-top:4px;">时间：{$one['addtime']|date='Y-m-d H:i',###}</div>	
+				<div style="color:#777;padding-top:4px;">用户：{$one.member.nickname}</div>	
+<div style="color:#777;padding-top:4px;">用户订单金额：{$one.payment.amt}</div>
+					<!-- <div style="color:#777;padding-top:4px;">状态：{$one['states_name']}</div>			 -->
+			</div>
+			<!-- <i class="layui-icon layui-icon-right"  style="width:20px;flex-shrink:0;" ></i> -->
+
+		</a>
+	</volist>
+		
+ 
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>后台管理系统</title>
+	<link rel="stylesheet" href="/layui/css/layui.css" >
+</head>	
+<style type="text/css">
+		#fullpage{background-color:gray;width: 100%;height: 100%;z-index: -1;position: absolute;left:0;right:0;top:0;bottom: 0;background-image: url(/Public/vip/bga.jpg);background-size: 100%;background-repeat: no-repeat;}
+		.login-head{position:fixed;left:0;top:0;width:100%;height:60px;line-height:60px;padding:0 0%;z-index: 999999;}
+ 		.login-box{margin:200px auto 0;width:400px;background-color:rgba(0,0,0,0.6);color:white;padding:15px 30px;border-radius:10px;box-shadow: 5px 5px 12px #333;}
+		.login-box .layui-input{font-size:15px;font-weight:400;background-color: transparent;color: white;}
+		.layui-form-pane .layui-form-label{background-color: transparent;}
+		.login-box input[name="pswd"]{letter-spacing:5px;font-weight:800}
+		.login-box .layui-btn{width:100%;}
+		.login-box .copyright{text-align:center;height:50px;line-height:50px;font-size:12px;color:#ccc}
+		.login-box .copyright a{color:#ccc;}
+	</style>
+
+<body id="fullpage">
+
+<div class="login-head" style="">
+ 	<!-- <h1 style="color:white;text-align:center;background:rgba(0,0,0,0.5);">后台管理系统</h1> -->
+	<div class="login-box">
+		<form action="/Vip/login/index" method="post" class="layui-form layui-form-pane">
+			<fieldset class="layui-elem-field layui-field-title">
+				<legend>管理后台登陆</legend>
+			</fieldset>
+			<div class="layui-form-item">
+				<label class="layui-form-label">登陆账号</label>
+				<div class="layui-input-block">
+					<input type="text" name="username" class="layui-input" lay-verify="required" placeholder="请输入登陆账号"  value="">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">登陆密码</label>
+				<div class="layui-input-block">
+					<input type="password" name="pswd" class="layui-input" lay-verify="required" placeholder="请输入密码" value="" autocomplete="off">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">验证码</label>
+				<div class="layui-input-inline" style="width:120px;">
+					<input type="text" name="proving" class="layui-input" maxlength="4" placeholder="验证码">					
+				</div>
+				<div class="layui-input-inline" style="width:auto;">
+					<img src="/Public/verify" id="verifyimg" style="width:100%;border:0;" class="layui-input" onclick="document.getElementById('verifyimg').src='/Public/verify?rand='+Math.random();"> 
+				</div>
+			</div>
+			<input type="submit" value="登陆" lay-submit="" lay-filter="formLogin" class="layui-btn">
+		</form>
+		<div class="copyright">
+			<!-- 技术维护：XXX公司 -->
+			<!-- © 2017-2018 <a href="/" target="_blank">忘记密码</a>  -->
+		</div>
+	</div>
+
+
+
+</div>
+
+<script src="/Static/particleground/jquery.particleground.min.js"></script>
+<script src="/layui/layui.js"></script>
+
+
+<script>
+// layui.use('element', function(){
+// 	var element = layui.element;
+	
+// });
+particleground(document.getElementById('fullpage'),{dotColor:'#5cbdaa',lineColor:'#5cbdaa'})
+</script>
+<script>
+if(top.location!=this.location)top.location=this.location;
+</script>
+</body>
+</html>

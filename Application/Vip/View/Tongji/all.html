@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{$etitle}全站统计概览</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="/layui/css/layui.css"  media="all">
+</head>
+<body style="backgroundaaa:#efeef0;">
+
+<style>
+	.layui-card-header{}
+	.topcolor1{background: #26cdc3;color: white; }
+	.topcolor2{background: #2caccf;color: white; }
+	.topcolor4{background: #23c07d;color: white; }
+	.topcolor3{background: #2a7a9d;color: white; }
+	#card1{
+		width:100%;
+height:130px;
+background:linear-gradient(90deg,rgba(70,224,214,1) 0%,rgba(16,153,209,1) 100%);
+border-radius:9px;
+
+color: white;
+	}
+
+	#card2{
+		width:100%;
+height:130px;
+background:linear-gradient(90deg,rgba(146,112,255,1) 0%,rgba(253,93,159,1) 100%);
+border-radius:9px;
+
+color: white;
+	}
+
+	#card3{
+		width:100%;
+height:130px;
+background:linear-gradient(90deg,rgba(248,207,139,1) 0%,rgba(243,89,105,1) 100%);
+border-radius:9px;
+
+color: white;
+	}
+
+#card4{
+	 width:100%;
+ height:130px;
+background:linear-gradient(90deg,rgba(118,79,253,1) 0%,rgba(167,205,254,1) 100%);
+border-radius:9px;
+
+color: white;
+}
+
+.bgtitle{font-size: 16px;}
+.bgnum{font-size: 25px;margin:10px 0px 8px 0px;}
+.bgsubnum{font-size: 14px;}
+.imgcont{position: relative;}
+.imgcont img{position: absolute;left:28px;top:22px;}
+.contcont{margin-left:95px;padding-top: 20px;}
+</style>
+							
+<!-- <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+	<legend>{$etitle}全站统计概览</legend>
+</fieldset> -->
+
+
+<div class="layui-fluid">
+  <div class="layui-row layui-col-space15">   
+	<div class="layui-col-sm6 layui-col-md3">
+	  <div class="layui-card">
+		 
+
+		<div class="layui-card-body layuiadmin-card-list">
+
+		<div id="card1">
+
+			<div class="imgcont"><img src="/Public/vip/g0.png" alt=""></div>
+			<div class="contcont">
+		  <p class="bgtitle">代理数量</p>
+		  <p class="bgnum">
+			 <?php echo 0+M('agent')->count(); ?> 人
+		  </p>
+		  <p class="bgsubnum"> 一级代理 
+			<span class="layuiadmin-span-color"><?php echo 0+M('agent')->where(['alevel'=>10])->count(); ?> </p>
+
+		  </div>
+		  </div>
+		</div>
+
+
+	  </div>
+	</div>
+	<div class="layui-col-sm6 layui-col-md3">
+	  <div class="layui-card">
+<div class="layui-card-body layuiadmin-card-list">
+		<div id="card2">
+			<div class="imgcont"><img src="/Public/vip/g2.png" alt=""></div>
+			<div class="contcont">
+		 <p class="bgtitle">订单数量</p>
+		  <p class="bgnum"><?php echo 0+M('payment')->where(['okstates'=>1])->count('id'); ?>
+		  </p>
+		  <p class="bgsubnum"> 提成 
+			<span class="layuiadmin-span-color"><?php echo 0+M('payment')->where(['ifdraw'=>['gt',0]])->sum('amt'); ?> 元
+		   </p>
+
+
+
+</div>
+		  
+
+		  </div>
+		</div>
+
+		 
+
+
+
+	  </div>
+	</div>
+	<div class="layui-col-sm6 layui-col-md3">
+	  <div class="layui-card">
+
+	  <div class="layui-card-body layuiadmin-card-list">
+<div id="card3">
+<div class="imgcont"><img src="/Public/vip/g1.png" alt=""></div>
+			<div class="contcont">
+ <p class="bgtitle">交易量</p>
+		  <p class="bgnum"><?php echo 0+M('payment')->where(['okstates'=>1])->sum('amt'); ?> 元
+		  </p>
+		  <p class="bgsubnum"> 最近一个月 
+			<span class="layuiadmin-span-color"><?php echo 0+M('payment')->where(['addtime'=>['gt',time()-3600*24*30],'okstates'=>1])->sum('amt'); ?> 元
+		   </p>
+
+</div>
+
+		  </div>
+		</div>
+
+
+
+	 
+
+
+
+	  </div>
+	</div>
+	<div class="layui-col-sm6 layui-col-md3">
+	  <div class="layui-card">
+
+	  <div class="layui-card-body layuiadmin-card-list">
+<div id="card4">
+
+<div class="imgcont"><img src="/Public/vip/g3.png" alt=""></div>
+			<div class="contcont">
+
+ <p class="bgtitle">		  微信用户
+</p>
+		  <p class="bgnum"><?php echo 0+M('member')->count('id'); ?> 人
+		  </p>
+		  <p class="bgsubnum"> 最近一个月 
+			<span class="layuiadmin-span-color"><?php echo 0+M('member')->where(['addtime'=>['gt',time()-3600*24*30]])->count('id'); ?>
+		   </p>
+
+
+
+	  </div>	  
+
+		  </div>
+		</div>
+
+
+
+		 
+	  </div>
+	</div>   
+	<div class="layui-col-sm12">
+	  <div class="layui-card">
+		<div class="layui-card-header">
+		  <!-- 统计图 -->
+		  <div class="layui-btn-group layuiadmin-btn-group">
+		   <!--  <button class="layui-btn layui-btn-primary layui-btn-xs">去年</button>
+			<button class="layui-btn layui-btn-primary layui-btn-xs">今年</button> -->
+		  </div>
+		</div>
+		<div class="layui-card-body">
+		  <div class="layui-row">
+			<div class="layui-col-sm12">
+				<div  style="width: 100%; height: 400px;">
+				  <div   id="container">
+
+ 
+				  <script src="https://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+<script src="https://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+<script>
+	$(function () {
+	$('#container').highcharts({
+		chart: {
+			type: 'line'
+		},
+		title: {
+			text: '订单及用户统计'
+		},
+		colors:['#744DFE','#FD5D9F'],
+			legend: {
+				 // align: 'left',
+            verticalAlign: 'bottom',
+            y: 20,
+            floating: true,
+            borderWidth: 0
+		},
+		// subtitle: {
+		// 	text: '订单及商户统计'
+		// },
+		xAxis: {
+			categories: [
+			<volist name="days" id="vo">'{$vo}',</volist>
+			]
+		},
+		yAxis: {
+			title: {
+				text: '订单统计'
+			}
+		},
+		plotOptions: {
+			line: {
+				dataLabels: {
+					enabled: true          // 开启数据标签
+				},
+				enableMouseTracking: true // 关闭鼠标跟踪，对应的提示框、点击事件会失效
+			}
+		},
+		series: [ 
+			{
+				name: '注册数',
+				data: [
+					<volist name="mon1" id="vo">{$vo},</volist>
+				]
+			}, {
+				name: '订单数',
+				data: [
+					<volist name="mon2" id="vo">{$vo},</volist>
+				]
+			}, {
+				name: '订单金额',
+				data: [
+					<volist name="mon3" id="vo">{$vo},</volist>
+				]
+			}
+		   
+		]
+	});
+});
+</script>
+
+
+					
+				  </div>
+				</div>
+			</div>
+			<!-- <div class="layui-col-sm4">
+			  <div class="layuiadmin-card-list">
+				<p class="layuiadmin-normal-font">月访问数</p>
+				<span>同上期增长</span>
+				<div class="layui-progress layui-progress-big" lay-showpercent="yes">
+				  <div class="layui-progress-bar" lay-percent="90%" style="width: 90%;"><span class="layui-progress-text">90%</span></div>
+				</div>
+			  </div>
+			  <div class="layuiadmin-card-list">
+				<p class="layuiadmin-normal-font">月下载数</p>
+				<span>同上期增长</span>
+				<div class="layui-progress layui-progress-big" lay-showpercent="yes">
+				  <div class="layui-progress-bar" lay-percent="20%" style="width: 20%;"><span class="layui-progress-text">20%</span></div>
+				</div>
+			  </div>
+			  <div class="layuiadmin-card-list">
+				<p class="layuiadmin-normal-font">月收入</p>
+				<span>同上期增长</span>
+				<div class="layui-progress layui-progress-big" lay-showpercent="yes">
+				  <div class="layui-progress-bar" lay-percent="25%" style="width: 25%;"><span class="layui-progress-text">25%</span></div>
+				</div>
+			  </div>
+			</div> -->
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!-- <div class="layui-col-sm4">
+	  <div class="layui-card">
+		<div class="layui-card-header">用户留言</div>
+		<div class="layui-card-body">
+		  <ul class="layuiadmin-card-status layuiadmin-home2-usernote">
+			<li>
+			  <h3>贤心</h3>
+			  <p>作为 layui 官方推出的后台模板，从初版的饱受争议，到后续的埋头丰富，逐步占据了国内后台系统应用的主要市场。</p>
+			  <span>5月30日 00:00</span>
+			  <a href="javascript:;" layadmin-event="replyNote" data-id="7" class="layui-btn layui-btn-xs layuiadmin-reply">回复</a>
+			</li>
+			<li>
+			  <h3>诸葛亮</h3>
+			  <p>皓首匹夫！苍髯老贼！你枉活九十有六，一生未立寸功，只会摇唇鼓舌！助曹为虐！一条断脊之犬，还敢在我军阵前狺狺狂吠，我从未见过有如此厚颜无耻之人！</p>
+			  <span>5月02日 00:00</span>
+			  <a href="javascript:;" layadmin-event="replyNote" data-id="5" class="layui-btn layui-btn-xs layuiadmin-reply">回复</a>
+			</li>
+		   
+			<li>
+			  <h3>张爱玲</h3>
+			  <p>于千万人之中遇到你所要遇到的人，于千万年之中，时间的无涯的荒野中，没有早一步，也没有晚一步，刚巧赶上了，那也没有别的话好说，唯有轻轻的问一声：“噢，原来你也在这里？”</p>
+			  <span>4月11日 00:00</span>
+			  <a href="javascript:;" layadmin-event="replyNote" data-id="1" class="layui-btn layui-btn-xs layuiadmin-reply">回复</a>
+			</li>
+		  </ul>
+		</div>
+	  </div>
+	</div> -->
+	<div class="layui-col-sm12" style="display:none;">
+	  <div class="layui-row layui-col-space15">
+		<div class="layui-col-sm7">
+		  <div class="layui-card">
+			<div class="layui-card-header">接口调用汇总排名（前十）</div>
+			<div class="layui-card-body">
+			  <table class="layui-table layuiadmin-page-table" lay-skin="line">
+<?php 
+
+// $res = M('member')->field('id,count(id) as totalid,title,amt,catetitle,cateid,appid')->where([])->group('catetitle')->select();
+
+		array_multisort(array_column($res, 'totalid'), SORT_DESC, $res);
+		$dbarr = array_slice($res, 0, 10);
+
+				 ?>
+				<thead>
+				  <tr>
+					<th>排序</th>
+					<th>名称</th>
+					<!-- <th>时间</th> -->
+					<th>次数</th>
+				  </tr> 
+				</thead>
+				<tbody>
+					<volist name="dbarr" id="vo">
+				  <tr>
+					<td><span class="first">{$i}</span></td>
+					<td><i class="layui-icon layui-icon-log"> {$vo.catetitle}</i></td>
+					<!-- <td><span>{$voa.paytime|date="m-d H:i",###}</span></td> -->
+					<td>{$vo.totalid}   <i class="layui-icon layui-icon-praise"></i></td>
+				  </tr>
+				  </volist>
+				  <!-- <tr>
+					<td>贤心</td>
+					<td><i class="layui-icon layui-icon-log"> 09:30</i></td>
+					<td><span>在线</span></td>
+					<td>21 <i class="layui-icon layui-icon-praise"></i></td>
+				  </tr> -->
+				</tbody>
+			  </table>
+			</div>
+		  </div>
+		</div>
+
+		<div class="layui-col-sm5">
+		  <div class="layui-card">
+			<div class="layui-card-header">金额汇总排名（前十）</div>
+			<div class="layui-card-body">
+			  <table class="layui-table layuiadmin-page-table" lay-skin="line">
+				<thead>
+
+				<?php 
+
+// $res = M('uorders')->field('id,count(id) as totalid,title,amt,catetitle,cateid,sum(amt) as totalamt,appid')->where([])->group('cateid')->select();
+
+		array_multisort(array_column($res, 'totalamt'), SORT_DESC, $res);
+		$wcarts = array_slice($res, 0, 10);
+
+				 ?>
+				  <tr>
+					<th>排序</th>
+					<th>专辑名称</th>
+					<th>金额</th>
+					<th>次数</th>
+				  </tr> 
+				</thead>
+				<tbody>
+				  <volist name="wcarts" id="vo">
+				  <tr>
+					<td><span class="first">{$i}</span></td>
+					<td><i class="layui-icon layui-icon-log"> {$vo.catetitle}</i></td>
+					<td><span>{$vo.totalamt}</span></td>
+					<td>{$vo.totalid}   </td>
+				  </tr>
+				  </volist>
+				 <!--  <tr>
+					<td><span class="second">彭于晏</span></td>
+					<td><i class="layui-icon layui-icon-log"> 10:40</i></td>
+					<td><span>在线</span></td>
+					<td>21 <i class="layui-icon layui-icon-praise"></i></td>
+				  </tr> -->
+				   
+				</tbody>
+			  </table>
+			</div>
+		  </div>
+		</div>
+	 
+	  </div>
+	</div>
+
+
+ 
+<!-- <div class="layui-col-sm12">
+	  <div class="layui-row layui-col-space15aa">
+	   
+	<iframe style="height:400px;width:100%;border:0;" src="http://geliangqiye.com/Vip/Wcart/today_all.html?ftime=2017-08-01+18%3A02%3A47+-+2018-10-31+18%3A02%3A47"></iframe> 
+ </div>
+	</div> -->
+
+
+
+  </div>
+</div>
+  
+
+<br><br><br>
+
+<script src="/layui/layui.js"></script>
+ 
+
+</body>
+</html>

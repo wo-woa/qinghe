@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>清和商城</title>
+  <link rel="stylesheet" href="/layui-v2.5.7/layui/css/layui.css">
+
+
+  <script  src="/layui-v2.5.7/layer.mobile-v2.0/layer_mobile/layer.js"></script>
+
+  
+</head>
+
+<body style="background:#f8f8f8;font-family:微软雅黑;">
+
+<div style="height:44px;width:100%;background:white;border-bottom:1px solid #eee;display:flex;line-height:44px;align-items:center;text-align:center;font-weight:500;overflow:hidden;font-size:16px;color:#333;">
+  <a href="/Mem" style="width:40px;"><i class="layui-icon layui-icon-left"  ></i></a>
+  <div style="flex:1 1 60%;">个人中心</div>
+  <div style="width:50px;"></div> 
+</div>
+
+ 
+<div style="background:#e1564f;display:flex;align-items:center;justify-content:space-around;padding:25px;color:white;flex-direction:column;">
+	<img src="{$meminfo.headimgurl}" style="width:70px;height:70px;border-radius:150%;background:white;border:5px solid white;" /> 
+	<div style="margin-top:8px;">{$meminfo.nickname}</div>
+</div>
+
+ 
+
+   
+
+
+	
+
+
+ 
+
+<br> 
+
+<div style="padding:0 10px;background:white;">
+  <a href="/Mem/" style="padding:3px 5px;display:flex;align-items:center;justify-contentaa:space-between;background:white;border-bottom:1px solid #f3f3f3;">
+	  <i class="layui-icon layui-icon-home"  style="width:25px;flex-shrink:0;font-size:1.15em;" ></i>
+	  <div style="flex:1 1 60%;">
+		<div style="font-size:1.15em;padding:10px 0;">首页</div>
+		<!-- <div style="color:#666;"><span style="font-size:1.05em;margin-right:10px;color:#333;">李工 </span> 13452233444</div> -->
+		<!-- <div style="color:#777;padding-top:4px;">河南开封郑州北京5号</div>         -->
+	  </div>
+	  <i class="layui-icon layui-icon-right"  style="width:20px;flex-shrink:0;" ></i>
+
+	</a>
+</div>
+
+<br> 
+
+<div style="padding:0 10px;background:white;">
+  <a href="/Mem/orders" style="padding:3px 5px;display:flex;align-items:center;justify-contentaa:space-between;background:white;border-bottom:1px solid #f3f3f3;">
+	  <i class="layui-icon layui-icon-app"  style="width:25px;flex-shrink:0;font-size:1.15em;" ></i>
+	  <div style="flex:1 1 60%;">
+		<div style="font-size:1.15em;padding:10px 0;">我的订单</div>
+		<!-- <div style="color:#666;"><span style="font-size:1.05em;margin-right:10px;color:#333;">李工 </span> 13452233444</div> -->
+		<!-- <div style="color:#777;padding-top:4px;">河南开封郑州北京5号</div>         -->
+	  </div>
+	  <i class="layui-icon layui-icon-right"  style="width:20px;flex-shrink:0;" ></i>
+
+	</a>
+</div>
+
+
+
+
+
+
+
+<include file="Mem:my_ag" />
+
+
+<br><br><br>
+
+  <include file="Mem:_menu4" />
+
+
+
+</body>
+
+</html>

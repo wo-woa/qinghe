@@ -1,0 +1,17 @@
+<script src="/Public/akaimo/layer/layer.js"></script>
+<button onclick="onundo()">aa</button>
+<script>    
+    function onundo(){
+        layer.open({
+            content: '你是？',
+            btn: ['确认', '取消'],
+            shadeClose: false,
+            yes: function(){
+                layer.open({content: '你点了确认', time: 1});
+            }, no: function(){
+                // layer.open({content: '你选择了取消', time: 1});
+            }
+        });
+    }
+    
+</script>

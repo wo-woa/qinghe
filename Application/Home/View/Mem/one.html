@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>清和商城</title>
+	<link rel="stylesheet" href="/layui-v2.5.7/layui/css/layui.css">
+
+
+	<script  src="/layui-v2.5.7/layer.mobile-v2.0/layer_mobile/layer.js"></script>
+
+  
+</head>
+
+<body style="background:#f8f8f8;font-family:微软雅黑;">
+
+<div style="height:44px;width:100%;background:white;border-bottom:1px solid #eee;display:flex;line-height:44px;align-items:center;text-align:center;font-weight:500;overflow:hidden;font-size:16px;color:#333;">
+	<a href="/Mem" style="width:40px;"><i class="layui-icon layui-icon-left"  ></i></a>
+	<div style="flex:1 1 60%;">产品详情</div>
+	<div style="width:50px;"></div>	
+</div>
+
+ <!-- /Uploads/kimg/2020-12-17/5fdafff505fb4.jpg -->
+<img src="{$one.img}" style="height:260px;width:100%;display:block;">
+  
+
+<div style="background:white;display:flex;heightaaa:60px;margin-top:8px;align-items:center;justify-content:space-between;">
+	<div style="flex:1 1 80%;padding:15px 2px 15px  15px;">
+		<div style="font-size:16px;">{$one.title}</div>
+		<div style="color:red;font-size:16px;padding-top:12px;font-weight:bold;">
+			<span>￥ {$one.amt} 元</span>
+		</div>
+	</div>
+	<div style="width:80px;display:flex;flex-direction:column;align-items:center;">
+		<i class="layui-icon layui-icon-share"  style="<eq name="aflag" value="indasdfex">color:#16B58F;</eq>"></i> 
+		分享
+	</div>
+</div>
+
+
+<div style="background:white;display:flex;height:44px;margin-top:8px;text-align:center;justify-content:space-around;">
+	<span style="text-align:center;font-size:18px;border-bottom:2px solid red;line-height:43px;display:inline-block;">图文详情</span>
+</div>
+
+ 
+<div style="margin:5px;">
+
+	    <div id="kkcon">{$one.content|htmlspecialchars_decode}</div> 
+
+	<!-- <img src="/Uploads/kimg/2020-12-17/5fdafff505fb4.jpg" style="height:760px;width:100%;"> -->
+
+</div>
+
+
+
+
+
+
+	<br><br><br>
+	<style type="text/css">
+		.mitem {
+			width: 60px;
+			text-align: center;
+			display: block;
+			padding: 4px 0px 1px 0px;
+		}
+
+		.mimg {
+			width: auto;
+			height: 28px;
+			display: block;
+			margin: 0 auto;
+		}
+
+		#kmenuflex div {
+			font-size: 13px;
+			color: #666;
+		}
+		#kmenuflex i {
+			font-size: 22px;
+			margin-bottom:2px;
+			margin-top: 2px;
+			color: #666;
+			display: inline-block;
+		}
+
+		#cartnum{
+			position: absolute;
+			background: red;
+			color: white;
+			border-radius: 20px;
+			top: -29px;
+			width: 15px;
+		}
+	</style>
+	<div id="kmenuflex"
+		style="display:flex;position:fixed;bottom:0;left:0;right:0;height:54px;background:white;border-top:0px solid #f4f4f4;">
+		<a href="/Mem/index" class="mitem">
+			<!-- <img src="/Public/nui/1<eq name="aflag" value="index">1</eq>.png" class="mimg">
+			<div style="<eq name="aflag" value="index">color:#16B58F;</eq>">首页</div> -->
+			<i class="layui-icon layui-icon-home"  style="<eq name="aflag" value="index">color:#16B58F;</eq>"></i>  
+			<div style="<eq name="aflag" value="index">color:#16B58F;</eq>">首页</div>
+		</a>
+		
+		<a href="/Mem/carts" class="mitem">
+			<i class="layui-icon layui-icon-cart"  style="<eq name="aflag" value="indasdfex">color:#16B58F;</eq>"></i>  
+			<div style="position:relative;<eq name="aflag" value="carts">color:#16B58F;</eq>">购物<span id="cartnum">6</span>车</div>
+		</a>
+		<a href="/Mem/onebuy/id/{$one.id}" onclickaa="showpg()" class="mitem" style="flex:1 1 40%;font-size:16px;display:flex;align-items:center;justify-content:space-around;background:red;color:white;">
+			立即购买			 
+		</a>
+		 
+	</div>
+
+
+		<script type="text/javascript">
+ function showpg(){
+
+ 		var pageii = layer.open({
+			  type: 1
+			  ,content: '你是我的小啊小苹果'
+			  ,anim: 'up'
+			  ,style: 'position:fixed; left:0; top:40%; width:100%; height:60%; border: none; -webkit-animation-duration: .5s; animation-duration: .5s;'
+			});
+
+ }
+ 		// layer.open({
+		 //    content: '移动版和PC版不能同时存在同一页面'
+		 //    ,btn: '我知道了'
+		 //  });
+ 	 
+ 	 
+ 	</script>
+
+</body>
+
+</html>

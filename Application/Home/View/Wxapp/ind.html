@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<?php 
+$cname=kget('tp','busi_active');
+
+$one=M('config')->where(['cname' => $cname])->find(); 
+
+ ?>
+	<meta charset="utf-8">
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<meta name="browsermode" content="application">
+
+	<title>{$one.desc}</title>
+	<link rel="stylesheet" type="text/css" href="/Public/aui121/css/aui.css">
+	 
+
+	<style type="text/css">
+	[v-cloak]{display: none;}
+	.aui-btn {
+		margin: 20px 0;
+	}
+	#pgtitle{margin:10px 10px 6px 10px;}
+	.aui-nav{border-top: 1px solid #EEE}
+	.aui-nav .aui-bar-tab li.bleft{border-left:1px solid #eaeaea;}
+	img{max-width: 100%;}
+	</style>
+</head>
+<body id="kapp" v-cloaka>
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="aui-content-paddedaaa">
+    <div><img src="{$one.img}" alt="" style="width:100%;"></div>     
+ </div> -->
+
+ <div class="aui-content-paddedaa">
+    <!-- <h4 class="aui-text-center" style="margin-top:8px;font-size:22px;margin-bottom:5px;">{$one.cvalue}</h4> -->
+    <div id="kkcon">{$one.content|htmlspecialchars_decode}</div> 
+
+
+    
+
+</div>
+
+ 
+
+
+ 
+
+<br><br>
+ 
+ 
+ 
+ 
+
+
+
+ 
+ 
+ </body>
+ </html>

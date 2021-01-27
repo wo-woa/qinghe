@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>清和商城</title>
+	<link rel="stylesheet" href="/layui-v2.5.7/layui/css/layui.css">
+
+
+	<script  src="/layui-v2.5.7/layer.mobile-v2.0/layer_mobile/layer.js"></script>
+
+  
+</head>
+
+<body style="background:#f8f8f8;font-family:微软雅黑;">
+
+<div style="height:44px;width:100%;background:white;border-bottom:1px solid #eee;display:flex;line-height:44px;align-items:center;text-align:center;font-weight:500;overflow:hidden;font-size:16px;color:#333;">
+	<a href="/Mem/carts" style="width:40px;"><i class="layui-icon layui-icon-left"  ></i></a>
+	<div style="flex:1 1 60%;">收货地址</div>
+	<div style="width:50px;"></div>	
+</div>
+
+<br>
+
+
+<style type="text/css">
+	#kform{font-size: 15px;}
+	#kform .kdiv{display:flex;height:46px;background:white;border-bottom:1px solid #f3f3f3;align-items:center;padding:0px 10px;}
+	#kform .ktitle{width:70px;padding:0 15px;text-align:right;}
+	#kform .kinput{flex:1 1 70%;background:none;border:none;}
+</style>
+<div id="kform">
+	
+
+	<div class="kdiv">
+		<span class="ktitle">收货姓名</span>
+		<input placeholder="请联系人姓名" value="{$maddr.realname}" class="kinput" type="text" id="realname">
+	</div>
+	<div class="kdiv">
+		<span class="ktitle">手机号</span>
+		<input placeholder="请联系手机号" value="{$maddr.tel}" class="kinput"  type="text"  id="tel">
+	</div>
+	<!-- <div class="kdiv">
+		<span class="ktitle">省市县区</span>
+		<input placeholder="省市县区" value="" class="kinput"  type="text">
+	</div> -->
+	<div class="kdiv">
+		<span class="ktitle">地址</span>
+		<input placeholder="您的收货地址" value="{$maddr.addr}" class="kinput"  type="text"  id="addr">
+	</div>
+
+	<br>
+	<!-- <div class="kdiv">
+		<span class="ktitle">备注</span>
+		<input placeholder="附加备注" value="" class="kinput"  type="text">
+	</div> -->
+
+</div>
+
+<div style="margin:15px;">
+			<button style="background:red;color:white;margin:0;border:0;width:100%;height:50px;font-size:16px;margin-top:40px;" id="tocommit">提交</button>
+		</div>
+
+
+
+
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#tocommit').click(function(){
+		var realname = $('#realname').val();
+		var addr = $('#addr').val();
+		var tel = $('#tel').val();
+		$.post('/Mem/addr',{
+					realname:realname
+					,addr:addr
+					,tel:tel					
+				},function(data){
+					if(data.status == 1){
+						layer.open({
+						    content: '操作成功'
+						    ,skin:'msg'
+						    ,time:3
+						    // ,btn: '确定'
+						  });
+						// location.reload();
+						window.location.href='/Mem/carts';
+						return;
+					}
+					location.reload();
+					// layer.msg('操作失败', {time: 3000,icon: 2});
+				},'json'); 
+
+	});
+	 
+	 
+});
+ 	</script>
+
+
+</body>
+
+</html>

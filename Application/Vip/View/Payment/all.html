@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title><?php echo ($etitle); ?></title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="/layui/css/layui.css?as=2" media="all">
+</head>
+<body>
+<style>
+	.tablediv{margin:20px 30px;}
+</style>
+ <div class="tablediv layui-form  layui-form-pane">
+	<div class="layui-form-itemaaa">
+		<div class="layui-inline">
+			<!-- <button class="layui-btn layui-btn-danger" id="addone"><span class="layui-icon layui-icon-add-1"></span>添加</button> -->
+			<!-- <button class="layui-btn layui-btn-normal" data-type="allset"><span class="layui-icon layui-icon-set-fill"></span>批量操作</button> -->
+			<!-- <button class="layui-btn layui-btn-warm" data-type="allset2"><span class="layui-icon layui-icon-set-fill"></span>批量操作2</button> -->
+		</div>
+		<div class="layui-inline">
+			<label class="layui-form-label" style="width:80px;">搜索：</label>
+			<div class="layui-input-inline" style="width: 130px;">
+				<input class="layui-input" name="ksearch" id="ksearch" autocomplete="off" placeholder="请输入搜索内容"> 
+			</div>
+		</div>
+
+		<!-- <div class="layui-inline">
+			<label class="layui-form-label" style="width:80px;">分类</label>
+			<div class="layui-input-inline" style="width:120px;">
+				<select name="modules" lay-verify="required"   id="ptype">
+					<option value="0" selected="selected">全部</option>
+					<option value="1">分类1</option>
+					<option value="2">分类2</option>
+				</select>
+			</div>
+		</div> -->
+
+		<div class="layui-inline">
+			<button class="layui-btn loadsearch" data-type="reload">搜索</button>
+			<button class="layui-btn layui-btn-normal" data-type="reloadall">全部</button>
+		</div>
+</div>
+ 
+
+	<table id="laytable" lay-filter="test"></table>
+</div> 
+
+
+
+<script src="/layui/layui.js"></script>
+<script>
+ 
+layui.use(['table','form'], function(){
+	var table = layui.table;
+	var form = layui.form;
+	
+	//第一个实例
+	table.render({
+		elem: '#laytable'
+		// ,height: '600'      
+		,url: '/Vip/<?php echo ($ctrlflag); ?>/showall/' //数据接口, fixed: 'left'
+		,page: true //开启分页
+		,id:'ktable' 
+		,limit:15
+		<?php if(($utp)  >  "-3"): ?>,where: {
+					key: {
+						utp: <?php echo ($utp); ?>
+					}
+				}<?php endif; ?>		,limits:[10,15,20,50,100]
+		,cols: [[
+			// {type:'numbers'},, fixed: 'left'
+			// {type: 'checkbox'},
+			{field: 'id', title: 'ID号', width:100, sort: true,align:'center'},
+			{field: 'memid', title: '用户地址', width:150, sort: true,align:'center'},
+			// {field: 'proid', title: '省份', width:100, sort: true,align:'center'},
+			{field: 'title', title: '产品名称', width:300, sort: true,align:'left'},
+			{field: 'rmk', title: '用户备注', width:140, sort: true,align:'center'},
+			// {field: 'qty', title: '数量', width:100, sort: true,align:'center'},
+			// {field: 'gunit', title: '单位', width:100, sort: true,align:'center'},
+			// {field: 'unitprice', title: '单价', width:100, sort: true,align:'center'},
+			// {field: 'amt', title: '支付金额', width:120, sort: true,align:'center'},
+			// {field: 'paytype', title: '支付类型', width:100, sort: true,align:'center'},
+			// {field: 'orderno', title: '订单号', width:100, sort: true,align:'center'},
+			// {field: 'ordertime', title: '下单时间', width:100, sort: true,align:'center'},
+			// {field: 'okstates', title: '下单状态', width:100, sort: true,align:'center'},
+			{field: 'oktime', title: '支付详情', width:200, sort: true,align:'center'},
+			// {field: 'okorderno', title: '订单号', width:100, sort: true,align:'center'},
+			// {field: 'hidden', title: '不显示', width:100, sort: true,align:'center'},
+			// {field: 'extra', title: '附加备注', width:100, sort: true,align:'center'},
+			
+			{field: 'pstates', title: '提成结算', width:120, sort: true,align:'center'},
+			
+			{field: 'parid', title: '上级代理', width:140, sort: true,align:'center'},
+			{field: 'prmk', title: '平台发货备注', width:190, sort: true,align:'center'},
+			// {field: 'granid', title: '上上级代理', width:100, sort: true,align:'center'},
+						{fixedaa: 'right', title: '操作', minWidth:100, sort: false,align:'center',templet:function(d){
+				var str= '<a class="layui-btn layui-btn-xs" lay-event="edit">发货</a>';//warm
+				// str+= '<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="setnew">弹出</a>';
+				// str+= '<a class="layui-btn layui-btn-normal layui-btn-xs" lay-event="savenew">新页</a>';
+				// str+= '<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="minusbtn">扣除</a>';
+				str+= '<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>';
+				return str;
+			}} 					 
+		]]
+		, done: function(res, curr, count){
+		}
+	});
+
+	 var $ = layui.$, active = {
+		reload: function(){ 
+			table.reload('ktable', {
+				page: {
+					curr: 1 //重新从第 1 页开始
+				}
+				,where: {
+					key: {
+						ksearch: $('#ksearch').val()
+						,ptype: $('#ptype').val()
+					}
+				}
+			});
+		},
+		reloadall: function(){
+			$('#ksearch').val('') 
+			$('#ptype').val(0)
+			form.render('select');
+				table.reload('ktable', {
+					page: {
+						curr: 1 //重新从第 1 页开始
+					}
+					,where: {key: {
+						 ksearch: 0,
+						 ptype:0
+						}}
+				});
+		},
+		allset: function(){ 
+			var checkStatus = table.checkStatus('ktable');			
+			data = checkStatus.data;
+			// var ids='-1';
+			var ids = new Array();
+			if(data.length>0){
+				for (var i in data) {
+					// ids = ids+','+data[i]['id']
+					ids.push(data[i]['id'])
+				};
+
+				var idstr = ids.join(',');
+				
+				$.post('/Vip/<?php echo ($ctrlflag); ?>/allset/',{
+						ids:idstr
+					},function(data){
+						if(data.status == 1){
+							layer.msg('操作成功', {time: 3000,icon: 1});
+							location.reload();
+							// window.location.href='/Agent/center';
+							return;
+						}
+						layer.msg('操作失败', {time: 3000,icon: 2});
+					},'json'); 
+			}else{
+				layer.msg('请选择数据', {time: 3000,icon: 2});
+			}
+			//layer.alert(JSON.stringify(data));
+		},
+		allset2: function(){ 
+			var checkStatus = table.checkStatus('ktable');			
+			data = checkStatus.data;
+			var ids='-1';
+			if(data.length>0){
+				for (var i in data) {
+					ids = ids+','+data[i]['id']
+				};
+
+				$.post('/Vip/<?php echo ($ctrlflag); ?>/allset2/',{
+						ids:ids
+					},function(data){
+						if(data.status == 1){
+							layer.msg('操作成功', {time: 3000,icon: 1});
+							location.reload();
+							// window.location.href='/Agent/center';
+							return;
+						}
+						layer.msg('操作失败', {time: 3000,icon: 2});
+					},'json'); 
+			}else{
+				layer.msg('请选择数据', {time: 3000,icon: 2});
+			}
+			//layer.alert(JSON.stringify(data));
+		},
+	};
+
+
+	table.on('sort(test)',function(obj){
+		table.reload('ktable', {
+				initSort: obj
+				,where: {          
+						field: obj.field
+						,order: obj.type         
+				}
+			});
+	});
+
+	table.on('tool(test)',function(obj){
+		var data=obj.data;
+		if(obj.event=='edit'){
+					layer.open({
+						type: 2,
+						title: '编辑',
+						shadeClose: false,
+						shade: 0.2,//false,
+						maxmin: true, //开启最大化最小化按钮
+						area: ['800px', '650px'],
+						content: '/Vip/<?php echo ($ctrlflag); ?>/form/id/'+data.id
+					});
+		}
+
+		if(obj.event=='del'){
+			// layer.alert('dddddel');
+			layer.confirm('确定删除本条记录？', {
+				title: '请确认操作',
+				btn: ['确定','取消']
+			}, function(index){
+				$.post('/Vip/<?php echo ($ctrlflag); ?>/delone/',{
+					id:data.id
+				},function(data){
+					if(data.status == 1){
+						layer.msg('删除成功', {time: 3000,icon: 1});
+						location.reload();
+						// window.location.href='/Agent/center';
+						return;
+					}
+					layer.msg('删除失败', {time: 3000,icon: 2});
+				},'json'); 
+				
+			}, function(index){
+				layer.close(index);
+				// layer.msg('也可以这样', {
+				//   time: 20000, //20s后自动关闭
+				//   btn: ['明白了', '知道了']
+				// });
+			});
+		}
+
+		if(obj.event=='savenew'){
+					layer.open({
+						type: 2,
+						title: '更新资料',
+						shadeClose: false,
+						shade: 0.2,//false,
+						maxmin: true, //开启最大化最小化按钮
+						area: ['800px', '650px'],
+						content: '/Vip/<?php echo ($ctrlflag); ?>/savenew/id/'+data.id
+					});
+		}
+
+		if(obj.event=='setnew'){
+			// layer.alert('dddddel');
+			layer.confirm('确定更改本条记录？', {
+				title: '请确认操作',
+				btn: ['确定','取消']
+			}, function(index){
+				$.post('/Vip/<?php echo ($ctrlflag); ?>/setnew/',{
+					id:data.id
+				},function(data){
+					if(data.status == 1){
+						layer.msg('更改成功', {time: 3000,icon: 1});
+						location.reload();
+						// window.location.href='/Agent/center';
+						return;
+					}					
+					layer.msg('删除失败', {time: 3000,icon: 2});
+				},'json'); 
+				
+			}, function(index){
+				layer.close(index);
+				// layer.msg('也可以这样', {
+				//   time: 20000, //20s后自动关闭
+				//   btn: ['明白了', '知道了']
+				// });
+			});
+		}
+
+		if(obj.event=='setord'){
+			layer.prompt('set new one');
+		}
+	});
+
+
+
+
+	
+	$('.tablediv .layui-btn').on('click', function(){
+		var type = $(this).data('type');   
+		active[type] ? active[type].call(this) : '';
+	});
+ 
+	$('#addone').on('click', function(){
+		layer.open({
+						type: 2,
+						title: '编辑',
+						shadeClose: false,
+						shade: 0.2,//false,
+						maxmin: true, //开启最大化最小化按钮
+						area: ['800px', '600px'],
+						content: '/Vip/<?php echo ($ctrlflag); ?>/form/'
+					});
+	});
+
+	
+});
+ 
+</script> 
+
+
+ 
+
+
+
+
+
+</body>
+</html>

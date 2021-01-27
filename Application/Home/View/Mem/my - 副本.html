@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+  <meta name="browsermode" content="application">
+<title>我的</title>
+<!-- <title>{$pagetitle}</title> -->
+  <link rel="stylesheet" type="text/css" href="/Public/aui121/css/aui.css">
+    <link rel="stylesheet" href="/layui-v2.5.7/layui/css/layui.css">
+
+
+  <style type="text/css">
+  [v-cloak]{display: none;}
+  .aui-btn {
+    margin: 20px 0;
+  }
+  #pgtitle{margin:10px 10px 6px 10px;}
+    .aui-nav{border-top: 1px solid #EEE}
+    .aui-nav .aui-bar-tab li.bleft{border-left:1px solid #eaeaea;}
+    </style>
+</head>
+<body id="kapp" style="background:#f3f3f3;" >
+
+
+
+
+
+
+<style>
+.my-header {
+  background-color: transparent;
+  position: relative;
+  margin-bottom: 0;
+}
+.my-info {
+  background-color: #3285FF;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  vertical-align: center;
+}
+ 
+.my-info p.nickname {
+  margin-top: 5px;
+  color: #ffffff;
+  font-size: 18px;
+}
+.aui-list-view-cell {
+  line-height: 26px;
+}
+.amount-info {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+.amount-info p {
+  font-size: 0.75em;
+}
+.amount-info p strong {
+  font-size: 18px;
+}
+.aui-list-view-cell {
+  line-height: 32px;
+}
+.amount-info .aui-col-xs-4 {
+  padding: 15px 0;
+  position: relative;
+  height: 80px;
+}
+.amount-info .aui-col-xs-4:after {
+  border-left: 1px solid #ddd;
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: scale(1);
+  pointer-events: none;
+}
+.amount-info .aui-col-xs-4:first-child:after {
+  border:none;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .amount-info .aui-col-xs-4:after {
+    right: -100%;
+    bottom: -100%;
+    -webkit-transform: scale(0.5);
+  }
+}
+</style>
+
+<div class="aui-content my-header">
+<!-- <div style="width:100%;line-height:44px;background:transparent;text-align:center;font-size:20px;color: rgba(16, 16, 16, 100);">我的</div> -->
+
+<br>
+<div class="my-infoaaa" style="displayaa:none;">       
+      <div class="aui-col-xs-3 aui-text-center" style="top:20px;">
+        <img src="{$meminfo.headimgurl}" style="width:70px;height:70px;border-radius:150%;margin-top:-20px;background:white;border:5px solid white;" /> 
+        <!-- <div style="color:#222;">{$meminfo.nickname}</div> -->
+      </div>
+      <div class="aui-col-xs-9">
+        <div class="headp" ><br></div>
+        <div class="headp" ><a href="/User/addr" style="font-sizeaa:12px;color: #000;">{$meminfo.nickname}</a></div>
+      </div>
+
+
+ 
+ 
+ 
+  </div>     
+      <div style="clear:both;"></div>
+</div>
+
+ 
+
+
+  <div style="clear:both;"></div>
+ <eq name="myself.utype" value="0"> 
+<div style="border-radius:10px;background:#2A343E;color:#F9E8D0;height:80px;margin:20px 15px 0px 15px;padding:0px 15px;display:flex;align-items:center;justify-content:space-between;">
+  <span style="flex:1 1 60%;">暂未绑定</span>
+  <a href="/User/reg" style="color:#2A343E;background:#F9E8D0;border-radius:15px;padding:2px 5px;">立即绑定 </a>
+</div>
+       
+         
+       
+
+<else/> 
+
+  <div style="border-radius:10px;background:#2A343E;color:#F9E8D0;height:80px;margin:20px 15px 0px 15px;padding:0px 15px;display:flex;align-items:center;justify-content:space-between;">
+  <span style="flex:1 1 60%;">已绑定</span>
+  <a href="/User/addr" style="color:#2A343E;background:#F9E8D0;border-radius:15px;padding:2px 5px;">立即预约 </a>
+</div>     
+         <!-- 有效日期：{$myself.validtime|date='Y-m-d',###}  -->
+
+
+</eq> 
+
+
+
+ 
+<eq name="myself.utype" value="0"><else/> 
+<!-- <div style="text-align:center;"><img src="/Public/jinriyixing/hjb.png?a=22" style="width:80px;margin-top:5px;"></div> -->
+</eq> 
+<!-- <div class="aui-content">
+    <div class="aui-form">
+      <div class="aui-input-row">
+        <label class="aui-input-addon">会员姓名：</label>
+        <input type="text" class="aui-input aui-text-right" disabled value="{$meminfo.realname}"/>
+      </div>
+      <div class="aui-input-row">
+        <label class="aui-input-addon">手机号：</label>
+        <input type="text" class="aui-input aui-text-right" disabled value="{$meminfo.tel}"/>
+      </div>
+       
+    </div>
+  </div> -->
+
+ 
+ <style type="text/css">
+#mcon{background: white;margin:15px;border-radius: 15px;color:#666;}
+#mcon img{display: none;}
+.aui-list-view-cell::after,.aui-list-view-cell:last-child::after{border:none;}
+.aui-list-view-cell{line-height: 22px;}
+.aui-list-view-cell > a{}
+ </style>
+ <div class="aui-content" id="mcon" style="display:block;">
+    <ul class="aui-list-viewaa aui-in">
+      <li class="aui-list-view-cell">
+        <div class="aui-arrow-rightaaa">
+           <img src="/Public/jinriyixing/yh.png" alt="" style="width:20px;height:20px;margin-right:10px;margin-bottom:-2px;">用户名称：
+           <div style="float:right;">{$myself.realname}</div>          
+        </div>
+      </li>
+      <li class="aui-list-view-cell">
+        <div class="aui-arrow-rightaaa">
+           <img src="/Public/jinriyixing/sj.png" alt="" style="width:20px;height:20px;margin-right:10px;margin-bottom:-3px;">手机号码：
+           <div style="float:right;">{$myself.tel}</div>
+        </div>
+      </li>
+
+<eq name="myself.utype" value="0">
+      <!-- <li class="aui-list-view-cell">
+        <a class="aui-arrow-rightaaa" href="/User/reg">
+          <img src="/Public/jinriyixing/bd.png" alt="" style="width:21px;height:16px;margin-right:10px;margin-bottom:-2px;">绑定状态：
+          <span class="aui-badge aui-badge-danger" style="background:none;color:red;">未绑定，点击绑定</span>
+        </a>
+      </li> -->
+</eq>
+
+
+
+
+<eq name="myself.utype" value="1">
+      <!-- <li class="aui-list-view-cell">
+        <a class="aui-arrow-rightaaa">
+          <img src="/Public/static2/bd.png" alt="" style="width:16px;height:16px;margin-right:10px;margin-bottom:-2px;">版本：
+          <span class="aui-badge aui-badge-primary">黄金版</span>
+        </a>
+      </li> -->
+      <li class="aui-list-view-cell">
+        <a class="aui-arrow-rightaaa" href="/User/paylist">
+          <img src="/Public/jinriyixing/bd.png" alt="" style="width:21px;height:auto;margin-right:10px;margin-bottom:-2px;">有效日期：
+          <div style="float:right;">{$myself.validtime|date='Y-m-d',###} <span class="aui-badge aui-badge-danger;" style="background:none;color:#F87C54;font-size:15px;display:none;">升级充值</span></div>
+        </a>
+      </li>
+</eq>
+<eq name="myself.utype" value="2">
+      <!-- <li class="aui-list-view-cell">
+        <a class="aui-arrow-rightaaa">
+          <img src="/Public/static2/bd.png" alt="" style="width:16px;height:auto;margin-right:10px;margin-bottom:-2px;">用户等级：
+          <span class="aui-badge aui-badge-danger">至尊卡</span>
+        </a>
+      </li> -->
+      <li class="aui-list-view-cell">
+        <a class="aui-arrow-rightaaa" href="/User/paylist">
+          <img src="/Public/jinriyixing/bd.png" alt="" style="width:21px;height:auto;margin-right:10px;margin-bottom:-2px;">有效日期：
+          <div style="float:right;">{$myself.validtime|date='Y-m-d',###} <span class="aui-badge aui-badge-primary;" style="background:none;color:#F87C54;font-size:15px;display:none;">续期充值</span></div>
+        </a>
+      </li>
+</eq>
+
+
+ 
+
+
+
+    </ul>
+  </div>
+
+
+
+
+
+ 
+
+
+
+<br><br><br>
+
+  <include file="Mem:_menu4" />
+
+
+</body>
+</html>

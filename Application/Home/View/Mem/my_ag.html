@@ -1,0 +1,143 @@
+<gt name="shareid" value="0">
+<br>
+
+
+<?php 
+$agnum =0+ M('agent')->where(['parid' => $aginfo['id']])->count();
+$usernum = 0+M('member')->where(['parid' => $aginfo['id']])->count();
+		$fundnum =0+ M('Fundlog')->where(['agentid' => $aginfo['id'], 'ifdraw' => 0])->count();
+	$drawnum = 0+M('Fundlog')->where(['agentid' => $aginfo['id'], 'ifdraw' => 1])->count();
+
+	$hassub=0;
+	if($aginfo['alevel']==11 or 10==$aginfo['alevel']){
+		$hassub=1;
+	}
+
+ ?>
+<div style="padding:0 10px;background:white;">
+	  <a href="/Agent/myorders" style="padding:3px 5px;display:flex;align-items:center;justify-contentaa:space-between;background:white;border-bottom:1px solid #f3f3f3;">
+		  <i class="layui-icon layui-icon-star"  style="width:25px;flex-shrink:0;font-size:1.15em;" ></i>
+		  <div style="flex:1 1 60%;">
+			<div style="font-size:1.15em;padding:10px 0;">代理等级 <span style="float:right;padding-right:8px;">{$aginfo.level}</span></div>
+			<!-- <div style="color:#666;"><span style="font-size:1.05em;margin-right:10px;color:#333;">李工 </span> 13452233444</div> -->
+			<!-- <div style="color:#777;padding-top:4px;">河南开封郑州北京5号</div>         -->
+		  </div>
+		  <!-- <i class="layui-icon layui-icon-right"  style="width:20px;flex-shrink:0;" ></i> -->
+
+		</a>
+	</div>
+	<div style="padding:0 10px;background:white;">
+	  <a href="/Agent/myorders" style="padding:3px 5px;display:flex;align-items:center;justify-contentaa:space-between;background:white;border-bottom:1px solid #f3f3f3;">
+		  <i class="layui-icon layui-icon-survey"  style="width:25px;flex-shrink:0;font-size:1.15em;" ></i>
+		  <div style="flex:1 1 60%;">
+			<div style="font-size:1.15em;padding:10px 0;">代理状态 <span style="float:right;padding-right:8px;">{$aginfo.states_name}</span></div>
+			<!-- <div style="color:#666;"><span style="font-size:1.05em;margin-right:10px;color:#333;">李工 </span> 13452233444</div> -->
+			<!-- <div style="color:#777;padding-top:4px;">河南开封郑州北京5号</div>         -->
+		  </div>
+		  <!-- <i class="layui-icon layui-icon-right"  style="width:20px;flex-shrink:0;" ></i> -->
+
+		</a>
+	</div>
+
+<eq name="hassub" value="1">
+	<div style="padding:0 10px;background:white;">
+	  <a href="/Agent/myags" style="padding:3px 5px;display:flex;align-items:center;justify-contentaa:space-between;background:white;border-bottom:1px solid #f3f3f3;">
+		  <i class="layui-icon layui-icon-user"  style="width:25px;flex-shrink:0;font-size:1.15em;" ></i>
+		  <div style="flex:1 1 60%;">
+			<div style="font-size:1.15em;padding:10px 0;">我的下级代理<span style="float:right;padding-right:8px;"> {$agnum}人</span></div>
+			<!-- <div style="color:#666;"><span style="font-size:1.05em;margin-right:10px;color:#333;">李工 </span> 13452233444</div> -->
+			<!-- <div style="color:#777;padding-top:4px;">河南开封郑州北京5号</div>         -->
+		  </div>
+		  <i class="layui-icon layui-icon-right"  style="width:20px;flex-shrink:0;" ></i>
+
+		</a>
+	</div>
+</eq>
+
+	<div style="padding:0 10px;background:white;">
+	  <a href="/Agent/myusers" style="padding:3px 5px;display:flex;align-items:center;justify-contentaa:space-between;background:white;border-bottom:1px solid #f3f3f3;">
+		  <i class="layui-icon layui-icon-user"  style="width:25px;flex-shrink:0;font-size:1.15em;" ></i>
+		  <div style="flex:1 1 60%;">
+			<div style="font-size:1.15em;padding:10px 0;">我的下级用户<span style="float:right;padding-right:8px;"> {$usernum}人</span></div>
+			<!-- <div style="color:#666;"><span style="font-size:1.05em;margin-right:10px;color:#333;">李工 </span> 13452233444</div> -->
+			<!-- <div style="color:#777;padding-top:4px;">河南开封郑州北京5号</div>         -->
+		  </div>
+		  <i class="layui-icon layui-icon-right"  style="width:20px;flex-shrink:0;" ></i>
+
+		</a>
+	</div>
+
+
+
+
+	<div style="padding:0 10px;background:white;">
+	  <a href="/Agent/myorders" style="padding:3px 5px;display:flex;align-items:center;justify-contentaa:space-between;background:white;border-bottom:1px solid #f3f3f3;">
+		  <i class="layui-icon layui-icon-app"  style="width:25px;flex-shrink:0;font-size:1.15em;" ></i>
+		  <div style="flex:1 1 60%;">
+			<div style="font-size:1.15em;padding:10px 0;">我的提成订单<span style="float:right;padding-right:8px;"> {$fundnum}个</span></div>
+			<!-- <div style="color:#666;"><span style="font-size:1.05em;margin-right:10px;color:#333;">李工 </span> 13452233444</div> -->
+			<!-- <div style="color:#777;padding-top:4px;">河南开封郑州北京5号</div>         -->
+		  </div>
+		  <i class="layui-icon layui-icon-right"  style="width:20px;flex-shrink:0;" ></i>
+
+		</a>
+	</div>
+
+	<div style="padding:0 10px;background:white;">
+	  <a href="/Agent/mydraws" style="padding:3px 5px;display:flex;align-items:center;justify-contentaa:space-between;background:white;border-bottom:1px solid #f3f3f3;">
+		  <i class="layui-icon layui-icon-table"  style="width:25px;flex-shrink:0;font-size:1.15em;" ></i>
+		  <div style="flex:1 1 60%;">
+			<div style="font-size:1.15em;padding:10px 0;">我的提现记录<span style="float:right;padding-right:8px;"> {$drawnum}条</span></div>
+			<!-- <div style="color:#666;"><span style="font-size:1.05em;margin-right:10px;color:#333;">李工 </span> 13452233444</div> -->
+			<!-- <div style="color:#777;padding-top:4px;">河南开封郑州北京5号</div>         -->
+		  </div>
+		  <i class="layui-icon layui-icon-right"  style="width:20px;flex-shrink:0;" ></i>
+
+		</a>
+	</div>
+
+	
+
+	<div style="padding:0 10px;background:white;">
+	  <a href="/Agent/todraw" style="padding:3px 5px;display:flex;align-items:center;justify-contentaa:space-between;background:white;border-bottom:1px solid #f3f3f3;">
+		  <i class="layui-icon layui-icon-rmb"  style="width:25px;flex-shrink:0;font-size:1.15em;" ></i>
+		  <div style="flex:1 1 60%;">
+			<div style="font-size:1.15em;padding:10px 0;">提现 <span style="float:right;color:red;padding-right:8px;">￥ {$funds.amt}</span></div>
+			<!-- <div style="color:#666;"><span style="font-size:1.05em;margin-right:10px;color:#333;">李工 </span> 13452233444</div> -->
+			<!-- <div style="color:#777;padding-top:4px;">河南开封郑州北京5号</div>         -->
+		  </div>
+		  <i class="layui-icon layui-icon-right"  style="width:20px;flex-shrink:0;" ></i>
+
+		</a>
+	</div>
+
+	<div style="padding:0 10px;background:white;">
+	  <a href="/Agent/shareewm" style="padding:3px 5px;display:flex;align-items:center;justify-contentaa:space-between;background:white;border-bottom:1px solid #f3f3f3;">
+		  <i class="layui-icon layui-icon-share"  style="width:25px;flex-shrink:0;font-size:1.15em;" ></i>
+		  <div style="flex:1 1 60%;">
+			<div style="font-size:1.15em;padding:10px 0;">分享商城二维码</div>
+			<!-- <div style="color:#666;"><span style="font-size:1.05em;margin-right:10px;color:#333;">李工 </span> 13452233444</div> -->
+			<!-- <div style="color:#777;padding-top:4px;">河南开封郑州北京5号</div>         -->
+		  </div>
+		  <i class="layui-icon layui-icon-right"  style="width:20px;flex-shrink:0;" ></i>
+
+		</a>
+	</div>
+
+<eq name="hassub" value="1">
+	<div style="padding:0 10px;background:white;">
+	  <a href="/Agent/agewm" style="padding:3px 5px;display:flex;align-items:center;justify-contentaa:space-between;background:white;border-bottom:1px solid #f3f3f3;">
+		  <i class="layui-icon layui-icon-share"  style="width:25px;flex-shrink:0;font-size:1.15em;" ></i>
+		  <div style="flex:1 1 60%;">
+			<div style="font-size:1.15em;padding:10px 0;">添加代理二维码</div>
+			<!-- <div style="color:#666;"><span style="font-size:1.05em;margin-right:10px;color:#333;">李工 </span> 13452233444</div> -->
+			<!-- <div style="color:#777;padding-top:4px;">河南开封郑州北京5号</div>         -->
+		  </div>
+		  <i class="layui-icon layui-icon-right"  style="width:20px;flex-shrink:0;" ></i>
+
+		</a>
+	</div>
+
+</eq>
+
+</gt>

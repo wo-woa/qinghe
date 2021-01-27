@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>旅游卡介绍</title>
+	<meta name="format-detection" content="telephone=no, address=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+	<meta name="apple-touch-fullscreen" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	
+		<link href="/Public/bootstrap.min.css" rel="stylesheet">
+		<link href="/Public/common.min.css" rel="stylesheet">
+   
+</head>
+<body style="background:#eee;">
+<div class="container container-fill">
+<link rel="stylesheet" type="text/css" href="/Public/reset.css" />
+<style type="text/css">        
+	
+	.menu{
+		background-color: #FFFFFF;
+		border-bottom:1px solid #ccc;
+		width:100%;
+		height:120px;
+		font-family: "Microsoft Yahei", "微软雅黑", Arial, "Hiragino Sans GB", "宋体", "Helvetica Neue", Helvetica, sans-serif ;
+	}
+	.menu-left{
+		float: left;
+		width: 33%;
+		height:102px;
+		margin:8px 0px 9px 4px;
+
+		background-repeat: no-repeat;
+		background-position: ;
+		background-size: contain;
+
+	}
+	.menu-left .left-top{
+		width: 102px;
+		height:102px;
+		background-color: rgba(22,32,4,0.6);
+	}
+	.menu-left .left-top p{
+		height:25%;
+		line-height:25px;
+		/*width:auto;*/
+		position: relative;
+		left:8%;
+		top: 37.5%;
+		text-indent: 10px;
+		/*padding-top: 37.5%;*/
+		vertical-align: baseline;
+		text-align: center;
+		font-family: "Microsoft Yahei", "微软雅黑", Arial, "Hiragino Sans GB", "宋体", "Helvetica Neue", Helvetica, sans-serif;
+		font-size: 18px;
+		color: #FFFFFF;
+
+		background-position: 15%;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.menu-right{
+		float:left;
+		width:auto;
+		height:120px;
+		padding-top: 20px;
+	}
+	.text-introduce{
+		height: 20px;
+		line-height: 20px;
+		font-size: 12px;
+		text-indent: 5px;
+		color: #999999;
+		margin:0;
+	}
+</style>
+<div>
+
+<?php 
+$cname='busi_intro';
+
+$vo=M('config')->where(['cname' => $cname])->find(); 
+
+ ?>
+
+
+	<a href="/Wxapp/ind/tp/{$cname}" class="menu" style="display:block;">
+		<div class="menu-left" style="background-image: url('{$vo.cpic}');">
+			<div class="left-top">
+				<p style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAtCAYAAAAtOHJTAAACdklEQVRYhe2Yv2sUQRiGn91EjAmIB+lE/A8sFME0Wog2YgpTiYKgiFiIaBQLxcZG1FjEREkUOwsbsUglioUYsBIMaU+0E9RgoUZj9rWYWXey7N7enfuruBeGndnv29mHb3ZmvllPkg9cBU4Ag1SvFeApcN6TNA7cqhgoSdOepI/AFuA9htirECgARmxpImlJRpOSqEEZszxN39JCtRFz1Wev8p2bdYH7x+G38qpaPbhuVWu4/gz7ELDX+inH93q2v3ngU5pTFtw0cCxHqLjeAbuAn0nGrGFdzR1nrcIIJiorcheAZ5iFMc9hDTUPLKcZs+CWgMe54nSgWs/WHly3qjVc1oQAaFBcxvK1lTEL7gpwluIi/Bw4AvxJMmbB7QaG8yZytB9YT5dw54AxiovcK+B7mjELbtGWSlTr2dqD61DhabCWcOvs1WtnEc5D24GjwE7M0pGWfgXA5rBeNJwHXAPGgYEOn71XNNwp4LLT/gz8iPmsYj6vrc69G8AEkr7YfxNTOf/zGJC0aPt+K2lU0rCkIadskLRR0pwi3ZHkS6JIuB3OCw+18Jt1/CZcW5HD2nDqHxLsPvCQ6HT3CLgUdyhKQUodzES5TwQ2iZnNaxKAsta5eD44Axy39TngYtJDZS/CfcAD4KRt3wVGgd9JzmXBhcN1HfNjHOAlJiVLPQ+XARdghvU25pAO5ns7QErEQpWxfS0DN4F9tv0aOAP8ynqwjMgNEoE9AQ7SBhiYyIWAKzlDxdPvN5gZ+q3dDvptJ5uAPcBpzAf6v0fBANjmtF8AhzsBA8BuW0VqQVKjxfaVWjxJDcw2MkKU6OUhAQuYpaPZTQd/ATAsZS6ABeZ9AAAAAElFTkSuQmCC);background-size: 20%;"> 介 绍</p>
+			</div>
+		</div>
+		<div class="menu-right">
+			<p style="height: 30px;line-height: 30px; font-size: 17px; color: #545454;font-weight: bold;">{$vo.desc}</p>
+			<p class="text-introduce" >{$vo.cvalue}</p>
+			<p class="text-introduce">{$vo.extra}</p>
+		</div>
+	</a>
+
+<?php 
+$cname='busi_active';
+
+$vo=M('config')->where(['cname' => $cname])->find(); 
+
+ ?>
+
+
+	<a href="/Wxapp/ind/tp/{$cname}" class="menu" style="display:block;">
+		<div class="menu-left" style="background-image: url('{$vo.cpic}');">
+			<div class="left-top">
+				<p style="background-image: url(data:image/png;base64,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);background-size: 20%;"> 激 活</p>
+			</div>
+		</div>
+		<div class="menu-right">
+			<p style="height: 30px;line-height: 30px; font-size: 17px; color: #545454;font-weight: bold;">{$vo.desc}</p>
+			<p class="text-introduce" >{$vo.cvalue}</p>
+			<p class="text-introduce">{$vo.extra}</p>
+		</div>
+	</a>
+
+	<?php 
+$cname='busi_renew';
+
+$vo=M('config')->where(['cname' => $cname])->find(); 
+
+ ?>
+
+
+	<a href="/Wxapp/ind/tp/{$cname}" class="menu" style="display:block;">
+		<div class="menu-left" style="background-image: url('{$vo.cpic}');">
+			<div class="left-top">
+				<p style="background-image: url(data:image/png;base64,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);background-size: 20%;"> 续 费</p>
+			</div>
+		</div>
+		<div class="menu-right">
+			<p style="height: 30px;line-height: 30px; font-size: 17px; color: #545454;font-weight: bold;">{$vo.desc}</p>
+			<p class="text-introduce" >{$vo.cvalue}</p>
+			<p class="text-introduce">{$vo.extra}</p>
+		</div>
+	</a>
+
+	<?php 
+$cname='busi_booking';
+
+$vo=M('config')->where(['cname' => $cname])->find(); 
+
+ ?>
+
+
+	<a href="/Wxapp/ind/tp/{$cname}" class="menu" style="display:block;">
+		<div class="menu-left" style="background-image: url('{$vo.cpic}');">
+			<div class="left-top">
+				<p style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAEIUlEQVRYhc2ZTWhcZRSGn7nJJE1M2mqppcUfmir+IGpssRRbjGKpvxQXbkSLiBvRhRsFEVy4U0HdFEUUFxVxpdbWUOp/q4ihShtF0oVF60+rLW2KTRviJI+Lc6eZTDPTyZ0ZkxcGhst3z33mu/Od7z3ny6nMUDlgHrAIuBpYDVwHLE+vtaVjCsAwcBDYBwwAPwJ/ASPAxIweOgPQXAqxArgHuBu4KoXOA63pmFzJPabA/wJjwK/AR8D7wE/AaK3AtYKeB/QCtwN3AT1AdxlUrRoB/gB2Av3A18A/xI/KDJoAy4CHgPuBi1LARugUcATYCrwODAHjFUerlT55dZW6RT1h83RK3a5uUDsq8VSCbFfvVD9RJ5oIWarv1E1qV62greod6sD/BFiqn1PYs2a2HDKnrlQ/nQXIovYaE9VqFdCL1bfqeMhJ4xXuVg/VEecztbcSaLf6tHo8Y/CCukNdq/aoL6jDGWONqa+qi4p8Sbr4c8C1wCZgYcZ0M0zkxa+AA0RSP5AxVp7I131EijwD2kYk82UZA0PsPCNl10briLcE2EiatxNiNnuIXzC/jsA5Yhstv5ZVbcDNwI1ASwK0E3v3ijqCFqHqAZtOS4EHgO4EWAzcS32z2SzlgduA5QlwDXDl7PJU1fnATQmwhnj9c1UJ0JcA1wMtswxTTXmgJwEu5ezVOpeUAzoT4AIm8+lclEBbQmNnszQ9tRNlSr1KgHxC1CwzrvCm0ThTd6KT1LczlSrXShRejVALUwu1/cCb6ffV1LcZTCTACRozowuADYS5gSjY3gaeBF4BBjPGnQDGUPtTW9UInVS3GmVMp5MWcqG63vC6v80w5rg6iPq8UWA1SgX1B/VZ9QanGvOl6iOGMa61YBxV+1E3mt3gVtOw4fQfUy9xauHYqz6n/llDnNPqMxhufLAJoEX9rb6j9qnznAReoO6s4f6j6roEOAxsJxoCzdBi4D5iQT0BXA50Ehau8xz3FohOyv6cmgNWAu9Svyc9l44TjbIh4ApgFdVhDwOPAx8UX0OHutnGLqpqqiXLjKvb1CWWFHejxOs/1MTZLFW+hjFHgPeAozBpRgS+BbYRRdpc0G6i4zcOU13TMeAN4PNZgCrXPuA1St5wub0bAl4m+3bXCP0CvEis9jPeoRy0AHwJvET25kE9OgZsBj6k3Hk5fduxS31Q/b45i35aHVSfUi+cjqlaI7fD6Kp9bONMSyXtVR9W51fiOVdrvJU48XiUaFLMpzGuHWI1nwB2EQtnF3C60uBaDhtyRF21njgJuZXJY5osKhD/xT1E/34HcfhQuX9fI2hRLYQ5XkMcPNxCzHCloxuI/GwKMUbM2ACwBfiCSOpVAbOAFpUQ3YvLgHXAWqLk7iL+Fi0pcLGGOgX8DnxDJPEhYrcpzOSh/wFdy6HUM4mIXwAAAABJRU5ErkJggg==);background-size: 20%;"> 预 约</p>
+			</div>
+		</div>
+		<div class="menu-right">
+			<p style="height: 30px;line-height: 30px; font-size: 17px; color: #545454;font-weight: bold;">{$vo.desc}</p>
+			<p class="text-introduce" >{$vo.cvalue}</p>
+			<p class="text-introduce">{$vo.extra}</p>
+		</div>
+	</a>
+
+	<!-- <div data-url="./index.php?i=3&c=entry&IntroduceType=2&do=introducedetail&m=we7_flow" class="menu">
+		<div class="menu-left" style="background-image: url('../addons/we7_flow/template/mobile/images/introduce2.png');">
+			<div class="left-top">
+				<p style="background-image: url('../addons/we7_flow/template/mobile/images/s_active.png');background-size: 20%;left: 7%"> 激 活</p>
+			</div>
+		</div>
+		<div class="menu-right">
+			<p style="height: 30px;line-height: 30px; font-size: 17px; color: #545454;font-weight: bold;">中食旅游卡激活流程</p>
+			<p class="text-introduce" >一键操作，简单快捷</p>
+			<p class="text-introduce">绑定激活，全国畅游</p>
+		</div>
+	</div>
+	<div data-url="./index.php?i=3&c=entry&IntroduceType=3&do=introducedetail&m=we7_flow" class="menu">
+		<div class="menu-left" style="background-image: url('../addons/we7_flow/template/mobile/images/introduce3.png');">
+			<div class="left-top">
+				<p style="background-image: url('../addons/we7_flow/template/mobile/images/s_renew.png');background-size: 20%;left: 7%"> 续 费</p>
+			</div>
+		</div>
+		<div class="menu-right">
+			<p style="height: 30px;line-height: 30px; font-size: 17px; color: #545454;font-weight: bold;">中食旅游卡升级流程</p>
+			<p class="text-introduce" >黄金版，至尊版</p>
+			<p class="text-introduce">内容更丰富，景点更全面</p>
+		</div>
+	</div>
+	<div data-url="./index.php?i=3&c=entry&IntroduceType=4&do=introducedetail&m=we7_flow" class="menu">
+		<div class="menu-left" style="background-image: url('../addons/we7_flow/template/mobile/images/introduce4.png');">
+			<div class="left-top">
+				<p style="background-image: url('../addons/we7_flow/template/mobile/images/s_recode.png'); background-size: 20%;left: 7%;"> 预 约</p>
+			</div>
+		</div>
+		<div class="menu-right">
+			<p style="height: 30px;line-height: 30px; font-size: 17px; color: #545454;font-weight: bold;">中食旅游卡景区预约流程</p>
+			<p class="text-introduce" >提前预约，流程简单</p>
+			<p class="text-introduce">游玩景区，免排队</p>
+		</div>
+	</div> -->
+
+
+</div>
+
+					<div class="text-center footer" style="margin:10px 0; width:100%; text-align:center; word-break:break-all;">
+																	&nbsp;&nbsp;            </div>
+											<script>require(['bootstrap']);</script>
+	</div>
+	<style>
+		h5{color:#555;}
+	</style>
+	
+</body>
+</html>

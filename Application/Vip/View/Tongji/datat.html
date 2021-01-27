@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{$etitle}统计概览</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="/layui/css/layui.css"  media="all">
+
+	<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.15/css/jquery.dataTables.css"> 
+<script type="text/javascript" charset="utf8" src="http://code.jquery.com/jquery-1.10.2.min.js"></script> 
+<script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
+
+ 
+</head>
+<body style="backgroundaaa:#efeef0;">
+
+
+							
+
+
+
+<div class="layui-fluid">
+  <div class="layui-row layui-col-space15">   
+	  
+
+
+
+
+<style>
+	.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button:hover{background: #009688!important;border:1px solid #009688;color:white!important;}
+	table.dataTable thead th, table.dataTable thead td,table.dataTable.no-footer{border-bottom: 0;}
+</style>
+
+
+
+
+
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+	<legend style="margin-bottom:18px;">{$etitle}全站用户预约统计</legend>
+<?php 
+
+$res = M('booking')->field('id,count(id) as totalid,memid')->where([])->group('memid')->select();
+
+		// array_multisort(array_column($res, 'totalid'), SORT_DESC, $res);
+		// $dbarr = array_slice($res, 0, 10);
+
+				 ?>				
+				
+
+	 <table id="kdatatable" class="layui-table displayaa">
+	<thead>
+		
+		<tr>			
+			<th>总预约</th>
+			<th>已通过</th><th>未通过</th><th>用户取消</th>
+			<!-- <th>预约中次数</th> -->
+			<th>用户姓名</th><th>手机号</th><th>身份证号</th>
+ 			<th>状态</th>
+		</tr>
+	</thead>
+	<tbody>
+
+	<volist name="res" id="vo">
+
+<?php $mem=M('member')->find($vo['memid']);if(!$mem or $mem['utype']<1)continue; ?>					<!-- <td><span class="first">{$i}</span></td> -->
+		<tr>			
+
+					<!-- <td><span>{$voa.paytime|date="m-d H:i",###}</span></td> -->
+					<td>{$vo.totalid}   <!-- <i class="layui-icon layui-icon-praise"></i> --></td>
+
+					<td> <?php echo 0+M('booking') ->where(['memid'=>$vo['memid'],'states'=>1])->group('memid')->count(); ?> </td>
+<td> <?php echo 0+M('booking') ->where(['memid'=>$vo['memid'],'states'=>2])->group('memid')->count(); ?> </td>
+<td> <?php echo 0+M('booking') ->where(['memid'=>$vo['memid'],'states'=>3])->group('memid')->count(); ?> </td>
+ 
+ 					<td><!-- 【{$vo.memid}】 --> {$mem.realname} </td><td> {$mem.tel} </td><td> {$mem.idcardno} </td>
+
+					<td><?php echo $mem['states']==1?'正常':layspan('已冻结'); ?></td>
+
+				  </tr>
+				  </volist>
+		<!-- <tr>
+			<td>1</td>
+			<td>Row 1 Data 2</td>
+		</tr> -->
+		
+
+		
+	</tbody>
+</table>
+</fieldset>
+
+<script>
+
+// 
+// 		"bStateSave": true,//状态保存
+// 		"aoColumnDefs": [
+// 		  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+// 		  // {"orderable":false,"aTargets":[0,-1]}// 制定列不参与排序
+// 		]
+	
+	$(document).ready( function () {
+	$('#kdatatable').DataTable({
+		"aLengthMenu": [300,500,1000],
+		"aaSorting": [[ 1, "desc" ]],//默认第几个排序
+    language: {    	
+        "sProcessing": "处理中...",
+        "sLengthMenu": "显示 _MENU_ 项结果",
+        "sZeroRecords": "没有匹配结果",
+        "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+        "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+        "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+        "sInfoPostFix": "",
+        "sSearch": "搜索:",
+        "sUrl": "",
+        "sEmptyTable": "表中数据为空",
+        "sLoadingRecords": "载入中...",
+        "sInfoThousands": ",",
+        "oPaginate": {
+            "sFirst": "首页",
+            "sPrevious": "上页",
+            "sNext": "下页",
+            "sLast": "末页"
+        },
+        "oAria": {
+            "sSortAscending": ": 以升序排列此列",
+            "sSortDescending": ": 以降序排列此列"
+        }
+    }
+});
+} );
+</script>
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+  </div>
+</div>
+  
+
+<br><br><br>
+
+<script src="/layui/layui.js"></script>
+ 
+
+</body>
+</html>

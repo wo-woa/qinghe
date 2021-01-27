@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{$etitle}</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="/layui/css/layui.css"  media="all">
+</head>
+<body>
+							
+<!-- <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+	<legend>{$etitle}</legend>
+</fieldset> -->
+ 
+<form class="layui-form" action="{:U( $ctrlflag . '/addsave')}" style="padding:20px;" method="post">
+	<input type="hidden" name="op" value="add">
+	<gt name="dbid" value="0">
+		<input type="hidden" name="id" value="{$dbid}">
+		<input type="hidden" name="op" value="save">		
+	<else/>
+		<input type="hidden" name="addtime" value="{:time()}">
+	</gt>		
+		<input type="hidden" name="edittime" value="{:time()}">
+
+
+	<!-- <div class="layui-form-item">
+		<label class="layui-form-label">图片</label>
+		<div class="layui-input-block">
+			<if condition="$dbres['img'] neq '' ">
+				<img src="{$dbres['img']}"  id="kimg"  style="border:none;width:80px;height:80px;padding-left:0;">
+			<else />
+				<img src="/Public/vip/up.jpg"  id="kimg"  style="border:none;width:80px;height:80px;padding-left:0;">
+			</if>
+		</div>
+	</div>
+	<input type="hidden" id="hiddenpic" value="{$dbres.img}" name="img"> -->
+
+	<?php //$iarr=M('cate')->where(['states'=>1])->field('id,title,addtime')->order('id desc')->select(); ?>
+
+	<!-- <div class="layui-form-item">
+		<label class="layui-form-label">分类</label>
+		<div class="layui-input-block">
+			<select name="cateid" lay-filter="aihao" lay-verify="required">
+				<option value=""></option>
+				<volist name="iarr" id="vo">
+						<option value="{$vo.id}" <if condition="$vo['id'] eq $dbres['cateid']">selected</if>>{$vo.title}</option>
+					</volist>
+			</select>
+		</div>
+	</div> -->
+
+	<div class="layui-form-item">
+	<label class="layui-form-label">代理</label>
+	<div class="layui-input-block">
+		<input name="agentid" value="{$dbres.agentid}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">代理等级</label>
+	<div class="layui-input-block">
+		<input name="agtype" value="{$dbres.agtype}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">用户</label>
+	<div class="layui-input-block">
+		<input name="memid" value="{$dbres.memid}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">支付订单</label>
+	<div class="layui-input-block">
+		<input name="payid" value="{$dbres.payid}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">结算名称</label>
+	<div class="layui-input-block">
+		<input name="title" value="{$dbres.title}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">操作金额</label>
+	<div class="layui-input-block">
+		<input name="amt" value="{$dbres.amt}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">更新前金额</label>
+	<div class="layui-input-block">
+		<input name="bfamt" value="{$dbres.bfamt}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">更新后金额</label>
+	<div class="layui-input-block">
+		<input name="afamt" value="{$dbres.afamt}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">处理时间</label>
+	<div class="layui-input-block">
+		<input name="addtime" value="{$dbres.addtime}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">处理日期</label>
+	<div class="layui-input-block">
+		<input name="ymd" value="{$dbres.ymd}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">状态</label>
+	<div class="layui-input-block">
+		<input name="states" value="{$dbres.states}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">处理次数</label>
+	<div class="layui-input-block">
+		<input name="num" value="{$dbres.num}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">是否提现</label>
+	<div class="layui-input-block">
+		<input name="ifdraw" value="{$dbres.ifdraw}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">工单号</label>
+	<div class="layui-input-block">
+		<input name="unino" value="{$dbres.unino}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">附加备注</label>
+	<div class="layui-input-block">
+		<input name="extra" value="{$dbres.extra}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">备注</label>
+	<div class="layui-input-block">
+		<input name="rmk" value="{$dbres.rmk}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">更新时间</label>
+	<div class="layui-input-block">
+		<input name="edittime" value="{$dbres.edittime}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">平台操作备注</label>
+	<div class="layui-input-block">
+		<input name="payrmk" value="{$dbres.payrmk}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+<div class="layui-form-item">
+	<label class="layui-form-label">提现类型</label>
+	<div class="layui-input-block">
+		<input name="paytype" value="{$dbres.paytype}" autocompleteaaa="off" lay-verify="required" placeholder="不能为空" class="layui-input" type="text">
+	</div>
+</div>
+
+
+
+
+	
+	<!-- <div class="layui-form-item">
+		<label class="layui-form-label">日期</label>
+		<div class="layui-input-block">
+			<input name="laydate" value="{$dbres.laydate}" autocompleteaaa="off" id="laydate" lay-verifyaaa="required" placeholder="不能为空" class="layui-input" type="text">
+		</div>
+	</div> -->
+	<!-- <div class="layui-form-item layui-form-textaaa">
+		<label class="layui-form-label">内容</label>
+		<div class="layui-input-block">
+			<textarea class="layui-textarea layui-hideaaa" name="content" lay-verifyaaa="content" id="keditor" rows="15" style="width:100%;height:280px">{$dbres.content}</textarea>
+		</div>
+	</div> --> 
+	<div class="layui-form-item">
+		<label class="layui-form-label">状态</label>
+		<div class="layui-input-block">
+			<input name="states" value="0" title="审核中" required lay-verify="required" type="radio" <eq name="dbres.states" value="0">checked</eq>>
+			<input name="states" value="1" title="正常" required lay-verify="required" type="radio" <eq name="dbres.states" value="1">checked</eq>>
+			<input name="states" value="2" title="禁用" required lay-verify="required" type="radio" <eq name="dbres.states" value="2">checked</eq>>
+		</div>
+	</div>
+ 
+	<div class="layui-form-item">
+		<div class="layui-input-block">
+			<button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+		</div>
+	</div>
+</form>
+ 
+ <br><br>
+
+ <script src="/Public/kindeditor/kindeditor-min.js"></script>
+ <script>
+KindEditor.ready(function(K) {
+		K.create(['#keditor'],{
+			filterMode :false,
+			allowFileManager : true,
+			items:['source', '|',  'undo', 'redo', 'cut', 'copy', 'paste',
+'plainpaste',  '|', 'justifyleft', 'justifycenter', 'justifyright',
+'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+'superscript', '|','title', 'fontname', 'fontsize', '|','selectall','link', 'unlink', 'bold','italic', 'underline', 'strikethrough', 'removeformat', '|', 'image','multiimage','advtable', 'hr', 'emoticons','forecolor', 'hilitecolor' ,'-']
+		});
+	});
+ </script>
+
+
+
+<script src="/layui/layui.js"></script>
+
+<script>
+layui.use(['form', 'upload','laydate'], function(){ 
+	var laydate=layui.laydate;
+  	laydate.render({elem:'#laydate'})//range:true,type:'datetime',type:'month',min: '2016-10-14',max:''
+  
+	var form = layui.form
+	,layer = layui.layer
+	,upload = layui.upload;
+	var $ = layui.$;
+
+	  var uploadInst = upload.render({
+		elem: '#kimg' //绑定元素
+		,url: '/Pub/uploads_lay/' //上传接口
+		,size:800
+		,accept:'images'
+		,drag:true
+		,done: function(res, index, upload){
+			if(res.code==1){
+				var img = res.data.src;//'/'+
+				$('#hiddenpic').val(img);
+				$('#kimg').attr('src',img);
+			}else{
+				layer.msg(res.msg);
+			}
+		}
+		,error: function(){
+			layer.msg('上传失败')
+		}
+	  });
+	
+ 
+	//自定义验证规则
+	form.verify({
+		title: function(value){
+			if(value.length < 5){
+				return '标题至少得5个字符';
+			}
+		}
+		,pass: [/(.+){6,12}$/, '密码必须6到12位']		
+	});
+	
+	
+	
+	//监听提交
+	// form.on('submit(demo1)', function(data){
+	// 	layer.alert(JSON.stringify(data.field), {
+	// 		title: '最终的提交信息'
+	// 	})
+	// 	return false;
+	// });
+	
+	
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+<?php 
+$carts=D('Cart')->cartinfo($myid);
+ 
+$tnum = $carts['total'];
+
+ ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$shtitle}</title>
+	<link rel="stylesheet" href="/layui-v2.5.7/layui/css/layui.css">
+
+
+	<script  src="/layui-v2.5.7/layer.mobile-v2.0/layer_mobile/layer.js"></script>
+
+  
+</head>
+
+<body style="background:#f8f8f8;font-family:微软雅黑;">
+
+<div style="height:44px;width:100%;background:white;border-bottom:1px solid #eee;display:flex;line-height:44px;align-items:center;text-align:center;font-weight:500;overflow:hidden;font-size:16px;color:#333;">
+	<a href="/Mem" style="width:40px;"><i class="layui-icon layui-icon-left"  ></i></a>
+	<div style="flex:1 1 60%;">产品详情</div>
+	<div style="width:50px;"></div>	
+</div>
+
+ <!-- /Uploads/kimg/2020-12-17/5fdafff505fb4.jpg -->
+<img src="{$one.img}" style="height:210px;width:100%;display:block;">
+  
+
+<div style="background:white;display:flex;heightaaa:60px;margin-top:8px;align-items:center;justify-content:space-between;">
+	<div style="flex:1 1 80%;padding:15px 2px 15px  15px;">
+		<div style="font-size:16px;">{$one.title}</div>
+		<div style="color:red;font-size:16px;padding-top:12px;font-weight:bold;">
+			<span>￥ {$one.amt} 元</span>
+		</div>
+	</div>
+	<a href="/Mem/index" style="width:80px;display:flex;flex-direction:column;align-items:center;">
+		<i class="layui-icon layui-icon-app"    style="<eq name="aflag" value="indasdfex">color:#16B58F;</eq>"></i> 
+		更多
+	</a>
+</div>
+
+
+<div style="background:white;display:flex;height:44px;margin-top:8px;text-align:center;justify-content:space-around;">
+	<span style="text-align:center;font-size:18px;border-bottom:2px solid red;line-height:43px;display:inline-block;">图文详情</span>
+</div>
+
+ 
+<div style="margin:5px;">
+
+	    <div id="kkcon">{$one.content|htmlspecialchars_decode}</div> 
+
+	<!-- <img src="/Uploads/kimg/2020-12-17/5fdafff505fb4.jpg" style="height:760px;width:100%;"> -->
+
+</div>
+
+
+
+
+
+
+	<br><br><br>
+	<style type="text/css">
+		.mitem {
+			width: 60px;
+			text-align: center;
+			display: block;
+			padding: 4px 0px 1px 0px;
+		}
+
+		.mimg {
+			width: auto;
+			height: 28px;
+			display: block;
+			margin: 0 auto;
+		}
+
+		#kmenuflex div {
+			font-size: 13px;
+			color: #666;
+		}
+		#kmenuflex i {
+			font-size: 22px;
+			margin-bottom:2px;
+			margin-top: 2px;
+			color: #666;
+			display: inline-block;
+		}
+
+		#cartnum{
+			position: absolute;
+			background: red;
+			color: white;
+			border-radius: 20px;
+			top: -29px;
+			width: 15px;
+		}
+	</style>
+	<div id="kmenuflex"
+		style="display:flex;position:fixed;bottom:0;left:0;right:0;height:54px;background:white;border-top:0px solid #f4f4f4;">
+		<a href="/Mem/index" class="mitem">
+			<!-- <img src="/Public/nui/1<eq name="aflag" value="index">1</eq>.png" class="mimg">
+			<div style="<eq name="aflag" value="index">color:#16B58F;</eq>">首页</div> -->
+			<i class="layui-icon layui-icon-home"  style="<eq name="aflag" value="index">color:#16B58F;</eq>"></i>  
+			<div style="<eq name="aflag" value="index">color:#16B58F;</eq>">首页</div>
+		</a>
+		
+		<a href="/Mem/carts" class="mitem">
+			<i class="layui-icon layui-icon-cart"  style="<eq name="aflag" value="indasdfex">color:#16B58F;</eq>"></i>  
+			<div style="position:relative;<eq name="aflag" value="carts">color:#16B58F;</eq>">购物<gt name="tnum" value="0">
+			
+			<span id="cartnum">{$tnum}</span>
+
+			</gt>车</div>
+		</a>
+		<a href="javascript:void(0)" id="showpg" class="mitem" style="flex:1 1 40%;font-size:16px;display:flex;align-items:center;justify-content:space-around;background:red;color:white;">
+			立即购买			 
+		</a>
+		 
+	</div>
+
+
+
+
+<div style="position:absolute;bottom:0px;background:white;display:none;z-index:999;" id="tobuy">
+	<div style="position:fixed;background:rgba(0,0,0,0.5);top:0;left:0;right:0;bottom:0;z-index:-2;"></div>
+		<div  style="display:flex;justify-content:flex-start;widthaa:100%;background:white;align-items:middle;font-weight:normal;padding:10px;">
+			<!-- {$svo.img}/Public/jinriyixing/b.png-->
+			<img src="{$one.img}" alt="" style="width:120px;height:auto;max-height:100px;">
+			<div style="flex:1 1 80%;padding-left:10px;padding-top:2px;margin-right: 5px;">
+				<div style="text-align:right;position:relative;top:5px;"><span href="/Public/nui/vip.png?a=22"   class="verimg" style="width:110px;padding-right:5px;background:gray;color:white;padding:4px 10px;border-radius:15px;"  id="hidepg">X</span></div>
+
+				<div style="margin-top:-18px;">
+					<div><span class="thetitle  aui-ellipsis-1" style="color:#1a1a1a;font-size:16px;font-weight:500; display:inline-block;">{$one.title}</span></div>
+				 	<div><span class="therank  aui-ellipsis-1" style="color:#aaa;font-size:13px;padding-top:4px;display:inline-block;">{$one.intro}</span></div>
+
+					<div class="theaddr  aui-ellipsis-1" style="color:#aaa;font-size:13px;width:200px;padding-top:2px;display:inline-block;">单价：{$one['amt']}元/{$one['punit']}</div>
+
+					<div class="theaddr  aui-ellipsis-1" style="color:#aaa;font-size:13px;width:200px;padding-top:2px;display:inline-block;">总价：
+					<span id="tamt" style="color:red;">{$one['amt']}</span>
+					元</div>
+
+						<div style="width:120px;display:flex;align-items:center;border:1px solid #eee;line-height:30px;text-align:center;float:right;">
+							<i class="layui-icon layui-icon-subtraction"   style="width:40px;background:#eee;" id="subnum"></i>
+							<input style="flex:1 1 40px;width:42px;border-left:1px solid #eee;border-right:1px solid #eee;border-top:none;border-bottom:none;line-height:30px;text-align:center;"  value="1" autocomplete="off" readonly="" id="knum" />
+							<i class="layui-icon layui-icon-addition"  style="width:40px;background:#eee;" id="addnum"></i>							
+						</div>
+				</div>
+			</div>			
+		</div>
+
+		<div style="background:white;">
+			<button style="background:red;color:white;margin:0;border:0;width:100%;height:50px;font-size:16px;margin-top:40px;" id="addcart">加入购物车</button>
+		</div>
+</div>
+
+
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#showpg').click(function(){
+		$('#tobuy').show();
+	});
+
+	$('#hidepg').click(function(){
+		$('#tobuy').hide();
+	});
+
+	$('#addnum').click(function(){
+		var num = $('#knum').val();
+		num =1 +  parseInt(num);
+		$('#knum').val(num);
+
+		var newnum = num * {$one['amt']};
+		$('#tamt').text( newnum.toFixed(2) );
+	});
+
+	$('#subnum').click(function(){
+		// alert(44)
+		var num = $('#knum').val();
+		num = parseInt(num);
+		num = num - 1 > 0 ? num - 1 : 1;
+		$('#knum').val( num  );
+		var newnum = num * {$one['amt']};
+		$('#tamt').text( newnum.toFixed(2) );
+	});
+
+	$('#addcart').click(function(){
+		var num = $('#knum').val();
+
+		$.post('/Mem/addcart',{
+					id:{$one.id}
+					,num:num
+				},function(data){
+					if(data.status == 1){
+						layer.open({
+						    content: '操作成功'
+						    ,skin:'msg'
+						    ,time:3
+						    // ,btn: '确定'
+						  });
+						// layer.msg('操作成功', {time: 3000,icon: 1});
+						// location.reload();
+						window.location.href='/Mem/carts';
+						return;
+					}
+					location.reload();
+					// layer.msg('操作失败', {time: 3000,icon: 2});
+				},'json'); 
+	});
+});
+ 	</script>
+
+
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+    wx.config(<?php 
+    	$app=D('Payment')->wxconfig();
+    	echo $app->jssdk->buildConfig(array('getLocation','onMenuShareAppMessage','onMenuShareTimeline'), false) 
+    	?>);
+</script>
+<script type="text/javascript">
+// function toshare(){
+// 	WeixinJSBridge.invoke('sendAppMessage',{
+// 		"title":"{$shtitle}","desc":"{$shdesc}","imgUrl":"{$shimg}","link":"{$shlink}"
+// 	},function(res){});
+// 	// wx.onMenuShareAppMessage({title:'{$shtitle}',desc:'{$shdesc}',imgUrl:'{$shimg}',link:'{$shlink}',success:function(res){alert('操作成功！')}});
+//  //    wx.onMenuShareTimeline({,success:function(res){alert('操作成功！')}});
+// }
+
+// function callshare()
+//     {
+//         if (typeof WeixinJSBridge == "undefined"){
+            
+//             if( document.addEventListener ){
+//                 document.addEventListener('WeixinJSBridgeReady', toshare, false);
+//             }else if (document.attachEvent){
+//                 document.attachEvent('WeixinJSBridgeReady', toshare); 
+//                 document.attachEvent('onWeixinJSBridgeReady', toshare);
+//             }
+//         }else{
+//             toshare();
+//         }
+//     }
+
+wx.ready(function () {
+	wx.onMenuShareAppMessage({title:'{$shtitle}',desc:'{$shdesc}',imgUrl:'{$shimg}',link:'{$shlink}',success:function(res){alert('操作成功！')}});
+    wx.onMenuShareTimeline({title:'{$shtitle}',desc:'{$shdesc}',imgUrl:'{$shimg}',link:'{$shlink}',success:function(res){alert('操作成功！')}});
+});
+</script>
+
+</body>
+
+</html>

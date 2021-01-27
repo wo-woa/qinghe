@@ -1,0 +1,76 @@
+<?php 
+$carts=D('Cart')->cartinfo($myid);
+ 
+$tnum = $carts['total'];
+
+ ?>
+
+<br><br><br>
+	<style type="text/css">
+		.mitem {
+			flex: 1 1 auto;
+			text-align: center;
+			display: block;
+			padding: 4px 0px 1px 0px;
+		}
+
+		.mimg {
+			width: auto;
+			height: 28px;
+			display: block;
+			margin: 0 auto;
+		}
+
+		#kmenuflex div {
+			font-size: 13px;
+			color: #666;
+		}
+		#kmenuflex i {
+			font-size: 22px;
+			margin-bottom:2px;
+			margin-top: 2px;
+			color: #666;
+			display: inline-block;
+		}
+		#cartnum{
+			position: absolute;
+			background: red;
+			color: white;
+			border-radius: 20px;
+			top: -29px;
+			width: 15px;
+		}
+	</style>
+	<div id="kmenuflex"
+		style="display:flex;position:fixed;bottom:0;left:0;right:0;height:54px;background:white;border-top:1px solid #f4f4f4;">
+		<a href="/Mem/index" class="mitem">
+			<!-- <img src="/Public/nui/1<eq name="aflag" value="index">1</eq>.png" class="mimg">
+			<div style="<eq name="aflag" value="index">color:#16B58F;</eq>">首页</div> -->
+			<i class="layui-icon layui-icon-home"  style="<eq name="aflag" value="index">color:#16B58F;</eq>"></i>  
+			<div style="<eq name="aflag" value="index">color:#16B58F;</eq>">首页</div>
+		</a>
+		<!--  <a href="#" class="mitem">
+        <img src="/Public/jinriyixing/2<eq name="aflag" value="indexes">2</eq>.png" class="mimg">
+        <div>团游线路</div>
+    </a> -->
+		<a href="/Mem/carts" class="mitem">
+			<i class="layui-icon layui-icon-cart"  style="<eq name="aflag" value="carts">color:#16B58F;</eq>"></i> 
+			<div style="position:relative;<eq name="aflag" value="carts">color:#16B58F;</eq>">购物<gt name="tnum" value="0">
+
+			<span id="cartnum">{$tnum}</span>
+
+			</gt>车</div>
+		</a>
+		<a href="/Mem/orders" class="mitem">
+			<i class="layui-icon layui-icon-rmb"  style="<eq name="aflag" value="orders">color:#16B58F;</eq>"></i>  
+			<div style="<eq name="aflag" value="orders">color:#16B58F;</eq>">订单</div>
+			<!-- <img src="/Public/nui/4<eq name="aflag" value="my">4</eq>.png" class="mimg">
+			<div style="<eq name="aflag" value="my">color:#16B58F;</eq>">个人中心</div> -->
+		</a>
+		<a href="/Mem/my" class="mitem">
+			<i class="layui-icon layui-icon-username"  style="<eq name="aflag" value="my">color:#16B58F;</eq>"></i>  
+			<div style="<eq name="aflag" value="my">color:#16B58F;</eq>">我的</div>
+			<!-- <img src="/Public/nui/4<eq name="aflag" value="my">4</eq>.png" class="mimg">
+			<div style="<eq name="aflag" value="my">color:#16B58F;</eq>">个人中心</div> -->
+		</a>
+	</div>
